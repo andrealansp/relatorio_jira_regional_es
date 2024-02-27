@@ -1,0 +1,3230 @@
+[
+   {
+      "clauseNames":[
+         "statusCategoryChangedDate"
+      ],
+      "custom":false,
+      "id":"statuscategorychangedate",
+      "key":"statuscategorychangedate",
+      "name":"Categoria do status alterada",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"statuscategorychangedate",
+         "type":"datetime"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "parent"
+      ],
+      "custom":false,
+      "id":"parent",
+      "key":"parent",
+      "name":"Pai",
+      "navigable":true,
+      "orderable":false,
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "cf[10070]",
+         "Total forms"
+      ],
+      "custom":true,
+      "id":"customfield_10070",
+      "key":"customfield_10070",
+      "name":"Total forms",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugins.proforma-managed-fields:forms-total-field-cftype",
+         "customId":10070,
+         "type":"number"
+      },
+      "searchable":true,
+      "untranslatedName":"Total forms"
+   },
+   {
+      "clauseNames":[
+         "cf[10071]",
+         "Compass"
+      ],
+      "custom":true,
+      "id":"customfield_10071",
+      "key":"61de211f-8732-44ee-ace2-490fbca80575__PRODUCTION__compass-jira-integration-custom-field",
+      "name":"Compass",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "configuration":{
+            "customRenderer":true,
+            "environment":"PRODUCTION",
+            "readOnly":false
+         },
+         "custom":"ari:cloud:ecosystem::extension/61de211f-8732-44ee-ace2-490fbca80575/b77371bd-a301-42b5-bc21-691f2b6dd5c7/static/compass-jira-integration-custom-field",
+         "customId":10071,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Compass"
+   },
+   {
+      "clauseNames":[
+         "Categoria",
+         "Categoria[Category]",
+         "cf[10072]"
+      ],
+      "custom":true,
+      "id":"customfield_10072",
+      "key":"customfield_10072",
+      "name":"Categoria",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:jwm-category",
+         "customId":10072,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Categoria"
+   },
+   {
+      "clauseNames":[
+         "cf[10073]",
+         "Equipamento com falha",
+         "Equipamento com falha[Select List (cascading)]"
+      ],
+      "custom":true,
+      "id":"customfield_10073",
+      "key":"customfield_10073",
+      "name":"Equipamento com falha",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect",
+         "customId":10073,
+         "type":"option-with-child"
+      },
+      "searchable":true,
+      "untranslatedName":"Equipamento com falha"
+   },
+   {
+      "clauseNames":[
+         "cf[10076]",
+         "Logradouro",
+         "Logradouro[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10076",
+      "key":"customfield_10076",
+      "name":"Logradouro",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10076,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Logradouro"
+   },
+   {
+      "clauseNames":[
+         "fixVersion"
+      ],
+      "custom":false,
+      "id":"fixVersions",
+      "key":"fixVersions",
+      "name":"Vers\u00f5es corrigidas",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "items":"version",
+         "system":"fixVersions",
+         "type":"array"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10110]",
+         "Foi verificado os estado das baterias para alimenta\u00e7\u00e3o externa (painel solar) ?",
+         "Foi verificado os estado das baterias para alimenta\u00e7\u00e3o externa (painel solar) ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10110",
+      "key":"customfield_10110",
+      "name":"Foi verificado os estado das baterias para alimenta\u00e7\u00e3o externa (painel solar) ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10110,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Foi verificado os estado das baterias para alimenta\u00e7\u00e3o externa (painel solar) ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10077]",
+         "Sentido C\u00e2meras de Sa\u00edda",
+         "Sentido C\u00e2meras de Sa\u00edda[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10077",
+      "key":"customfield_10077",
+      "name":"Sentido C\u00e2meras de Sa\u00edda",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10077,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Sentido C\u00e2meras de Sa\u00edda"
+   },
+   {
+      "clauseNames":[
+         "statusCategory"
+      ],
+      "custom":false,
+      "id":"statusCategory",
+      "key":"statusCategory",
+      "name":"Categoria do status",
+      "navigable":true,
+      "orderable":false,
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10111]",
+         "Efetuada a limpeza preventiva externa e interna dos equipamentos ?",
+         "Efetuada a limpeza preventiva externa e interna dos equipamentos ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10111",
+      "key":"customfield_10111",
+      "name":"Efetuada a limpeza preventiva externa e interna dos equipamentos ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10111,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Efetuada a limpeza preventiva externa e interna dos equipamentos ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10078]",
+         "Sentido C\u00e2meras de Entrada",
+         "Sentido C\u00e2meras de Entrada[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10078",
+      "key":"customfield_10078",
+      "name":"Sentido C\u00e2meras de Entrada",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10078,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Sentido C\u00e2meras de Entrada"
+   },
+   {
+      "clauseNames":[
+         "resolution"
+      ],
+      "custom":false,
+      "id":"resolution",
+      "key":"resolution",
+      "name":"Resolu\u00e7\u00e3o",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"resolution",
+         "type":"resolution"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10112]",
+         "Foi verificado o reaperto dos contatos el\u00e9tricos ?",
+         "Foi verificado o reaperto dos contatos el\u00e9tricos ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10112",
+      "key":"customfield_10112",
+      "name":"Foi verificado o reaperto dos contatos el\u00e9tricos ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10112,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Foi verificado o reaperto dos contatos el\u00e9tricos ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10113]",
+         "Foi verificada a veda\u00e7\u00e3o do gabinete ?",
+         "Foi verificada a veda\u00e7\u00e3o do gabinete ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10113",
+      "key":"customfield_10113",
+      "name":"Foi verificada a veda\u00e7\u00e3o do gabinete ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10113,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Foi verificada a veda\u00e7\u00e3o do gabinete ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10114]",
+         "H\u00e1 obstru\u00e7\u00e3o das lentes das c\u00e2meras ?",
+         "H\u00e1 obstru\u00e7\u00e3o das lentes das c\u00e2meras ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10114",
+      "key":"customfield_10114",
+      "name":"H\u00e1 obstru\u00e7\u00e3o das lentes das c\u00e2meras ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10114,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"H\u00e1 obstru\u00e7\u00e3o das lentes das c\u00e2meras ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10104]",
+         "Checklist Content YAML",
+         "Checklist Content YAML[Paragraph]"
+      ],
+      "custom":true,
+      "id":"customfield_10104",
+      "key":"customfield_10104",
+      "name":"Checklist Content YAML",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10104,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Checklist Content YAML"
+   },
+   {
+      "clauseNames":[
+         "cf[10105]",
+         "Checklist Text",
+         "Checklist Text[Paragraph]"
+      ],
+      "custom":true,
+      "id":"customfield_10105",
+      "key":"customfield_10105",
+      "name":"Checklist Text",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10105,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Checklist Text"
+   },
+   {
+      "clauseNames":[
+         "cf[10106]",
+         "Efetuada a limpeza de lentes e c\u00fapulas ?",
+         "Efetuada a limpeza de lentes e c\u00fapulas ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10106",
+      "key":"customfield_10106",
+      "name":"Efetuada a limpeza de lentes e c\u00fapulas ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10106,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Efetuada a limpeza de lentes e c\u00fapulas ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10107]",
+         "Necess\u00e1rio ajustes de posicionamento ?",
+         "Necess\u00e1rio ajustes de posicionamento ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10107",
+      "key":"customfield_10107",
+      "name":"Necess\u00e1rio ajustes de posicionamento ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10107,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Necess\u00e1rio ajustes de posicionamento ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10108]",
+         "Foram verificadas as conex\u00f5es de cabeamento l\u00f3gico ?",
+         "Foram verificadas as conex\u00f5es de cabeamento l\u00f3gico ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10108",
+      "key":"customfield_10108",
+      "name":"Foram verificadas as conex\u00f5es de cabeamento l\u00f3gico ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10108,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Foram verificadas as conex\u00f5es de cabeamento l\u00f3gico ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10109]",
+         "Foram verificados os componentes el\u00e9tricos utilizados para alimenta\u00e7\u00e3o dos equipamentos (nobreak, disjuntor e fus\u00edveis) ?",
+         "Foram verificados os componentes el\u00e9tricos utilizados para alimenta\u00e7\u00e3o dos equipamentos (nobreak, disjuntor e fus\u00edveis) ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10109",
+      "key":"customfield_10109",
+      "name":"Foram verificados os componentes el\u00e9tricos utilizados para alimenta\u00e7\u00e3o dos equipamentos (nobreak, disjuntor e fus\u00edveis) ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10109,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Foram verificados os componentes el\u00e9tricos utilizados para alimenta\u00e7\u00e3o dos equipamentos (nobreak, disjuntor e fus\u00edveis) ?"
+   },
+   {
+      "clauseNames":[
+         "lastViewed"
+      ],
+      "custom":false,
+      "id":"lastViewed",
+      "key":"lastViewed",
+      "name":"\u00daltima visualiza\u00e7\u00e3o",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"lastViewed",
+         "type":"datetime"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "cf[10060]",
+         "Equipamentos",
+         "Equipamentos[Select List (cascading)]"
+      ],
+      "custom":true,
+      "id":"customfield_10060",
+      "key":"customfield_10060",
+      "name":"Equipamentos",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect",
+         "customId":10060,
+         "type":"option-with-child"
+      },
+      "searchable":true,
+      "untranslatedName":"Equipamentos"
+   },
+   {
+      "clauseNames":[
+         "Atendimento",
+         "Atendimento[Dropdown]",
+         "cf[10061]"
+      ],
+      "custom":true,
+      "id":"customfield_10061",
+      "key":"customfield_10061",
+      "name":"Atendimento",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10061,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Atendimento"
+   },
+   {
+      "clauseNames":[
+         "cf[10062]",
+         "Tempo de Atendimento"
+      ],
+      "custom":true,
+      "id":"customfield_10062",
+      "key":"customfield_10062",
+      "name":"Tempo de Atendimento",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-sla-field",
+         "customId":10062,
+         "type":"sd-servicelevelagreement"
+      },
+      "searchable":true,
+      "untranslatedName":"Tempo de Atendimento"
+   },
+   {
+      "clauseNames":[
+         "cf[10063]",
+         "Tempo de Solu\u00e7\u00e3o"
+      ],
+      "custom":true,
+      "id":"customfield_10063",
+      "key":"customfield_10063",
+      "name":"Tempo de Solu\u00e7\u00e3o",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-sla-field",
+         "customId":10063,
+         "type":"sd-servicelevelagreement"
+      },
+      "searchable":true,
+      "untranslatedName":"Tempo de Solu\u00e7\u00e3o"
+   },
+   {
+      "clauseNames":[
+         "cf[10064]",
+         "Tipo de Corre\u00e7\u00e3o",
+         "Tipo de Corre\u00e7\u00e3o[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10064",
+      "key":"customfield_10064",
+      "name":"Tipo de Corre\u00e7\u00e3o",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10064,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Tipo de Corre\u00e7\u00e3o"
+   },
+   {
+      "clauseNames":[
+         "cf[10065]",
+         "Houve Troca de Material",
+         "Houve Troca de Material[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10065",
+      "key":"customfield_10065",
+      "name":"Houve Troca de Material",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10065,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Houve Troca de Material"
+   },
+   {
+      "clauseNames":[
+         "cf[10066]",
+         "Item de Reposi\u00e7\u00e3o",
+         "Item de Reposi\u00e7\u00e3o[Select List (multiple choices)]"
+      ],
+      "custom":true,
+      "id":"customfield_10066",
+      "key":"customfield_10066",
+      "name":"Item de Reposi\u00e7\u00e3o",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:multiselect",
+         "customId":10066,
+         "items":"option",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Item de Reposi\u00e7\u00e3o"
+   },
+   {
+      "clauseNames":[
+         "priority"
+      ],
+      "custom":false,
+      "id":"priority",
+      "key":"priority",
+      "name":"Prioridade",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"priority",
+         "type":"priority"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10067]",
+         "Open forms"
+      ],
+      "custom":true,
+      "id":"customfield_10067",
+      "key":"customfield_10067",
+      "name":"Open forms",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugins.proforma-managed-fields:forms-open-field-cftype",
+         "customId":10067,
+         "type":"number"
+      },
+      "searchable":true,
+      "untranslatedName":"Open forms"
+   },
+   {
+      "clauseNames":[
+         "cf[10068]",
+         "Submitted forms"
+      ],
+      "custom":true,
+      "id":"customfield_10068",
+      "key":"customfield_10068",
+      "name":"Submitted forms",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugins.proforma-managed-fields:forms-submitted-field-cftype",
+         "customId":10068,
+         "type":"number"
+      },
+      "searchable":true,
+      "untranslatedName":"Submitted forms"
+   },
+   {
+      "clauseNames":[
+         "cf[10069]",
+         "Locked forms"
+      ],
+      "custom":true,
+      "id":"customfield_10069",
+      "key":"customfield_10069",
+      "name":"Locked forms",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugins.proforma-managed-fields:forms-locked-field-cftype",
+         "customId":10069,
+         "type":"number"
+      },
+      "searchable":true,
+      "untranslatedName":"Locked forms"
+   },
+   {
+      "clauseNames":[
+         "labels"
+      ],
+      "custom":false,
+      "id":"labels",
+      "key":"labels",
+      "name":"Categorias",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "items":"string",
+         "system":"labels",
+         "type":"array"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10103]",
+         "Checklist Completed",
+         "Checklist Completed[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10103",
+      "key":"customfield_10103",
+      "name":"Checklist Completed",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10103,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Checklist Completed"
+   },
+   {
+      "clauseNames":[
+         "remainingEstimate",
+         "timeestimate"
+      ],
+      "custom":false,
+      "id":"timeestimate",
+      "key":"timeestimate",
+      "name":"Estimativa de trabalho restante",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"timeestimate",
+         "type":"number"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"aggregatetimeoriginalestimate",
+      "key":"aggregatetimeoriginalestimate",
+      "name":"\u03a3 da Estimativa Original",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"aggregatetimeoriginalestimate",
+         "type":"number"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "affectedVersion"
+      ],
+      "custom":false,
+      "id":"versions",
+      "key":"versions",
+      "name":"Vers\u00f5es afetadas",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "items":"version",
+         "system":"versions",
+         "type":"array"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "issueLink"
+      ],
+      "custom":false,
+      "id":"issuelinks",
+      "key":"issuelinks",
+      "name":"Itens associados",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "items":"issuelinks",
+         "system":"issuelinks",
+         "type":"array"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "assignee"
+      ],
+      "custom":false,
+      "id":"assignee",
+      "key":"assignee",
+      "name":"Respons\u00e1vel",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"assignee",
+         "type":"user"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "status"
+      ],
+      "custom":false,
+      "id":"status",
+      "key":"status",
+      "name":"Status",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"status",
+         "type":"status"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "component"
+      ],
+      "custom":false,
+      "id":"components",
+      "key":"components",
+      "name":"Componentes",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "items":"component",
+         "system":"components",
+         "type":"array"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "id",
+         "issue",
+         "issuekey",
+         "key"
+      ],
+      "custom":false,
+      "id":"issuekey",
+      "key":"issuekey",
+      "name":"Chave",
+      "navigable":true,
+      "orderable":false,
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "cf[10050]",
+         "Major incident"
+      ],
+      "custom":true,
+      "id":"customfield_10050",
+      "key":"customfield_10050",
+      "name":"Major incident",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.modules.servicemanagement.major-incident-entity:major-incident-entity-field-cftype",
+         "customId":10050,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Major incident"
+   },
+   {
+      "clauseNames":[
+         "cf[10051]",
+         "Time to resolution"
+      ],
+      "custom":true,
+      "id":"customfield_10051",
+      "key":"customfield_10051",
+      "name":"Time to resolution",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-sla-field",
+         "customId":10051,
+         "type":"sd-servicelevelagreement"
+      },
+      "searchable":true,
+      "untranslatedName":"Time to resolution"
+   },
+   {
+      "clauseNames":[
+         "cf[10052]",
+         "Time to first response"
+      ],
+      "custom":true,
+      "id":"customfield_10052",
+      "key":"customfield_10052",
+      "name":"Time to first response",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-sla-field",
+         "customId":10052,
+         "type":"sd-servicelevelagreement"
+      },
+      "searchable":true,
+      "untranslatedName":"Time to first response"
+   },
+   {
+      "clauseNames":[
+         "cf[10053]",
+         "Time to close after resolution"
+      ],
+      "custom":true,
+      "id":"customfield_10053",
+      "key":"customfield_10053",
+      "name":"Time to close after resolution",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-sla-field",
+         "customId":10053,
+         "type":"sd-servicelevelagreement"
+      },
+      "searchable":true,
+      "untranslatedName":"Time to close after resolution"
+   },
+   {
+      "clauseNames":[
+         "cf[10054]",
+         "Time to review normal change"
+      ],
+      "custom":true,
+      "id":"customfield_10054",
+      "key":"customfield_10054",
+      "name":"Time to review normal change",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-sla-field",
+         "customId":10054,
+         "type":"sd-servicelevelagreement"
+      },
+      "searchable":true,
+      "untranslatedName":"Time to review normal change"
+   },
+   {
+      "clauseNames":[
+         "cf[10055]",
+         "Time to resolution"
+      ],
+      "custom":true,
+      "id":"customfield_10055",
+      "key":"customfield_10055",
+      "name":"Time to resolution",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-sla-field",
+         "customId":10055,
+         "type":"sd-servicelevelagreement"
+      },
+      "searchable":true,
+      "untranslatedName":"Time to resolution"
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":true,
+      "id":"customfield_10049",
+      "key":"customfield_10049",
+      "name":"Responders",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.modules.servicemanagement.responders-entity:responders-entity-field-cftype",
+         "customId":10049,
+         "items":"string",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Responders"
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"aggregatetimeestimate",
+      "key":"aggregatetimeestimate",
+      "name":"\u03a3 da estimativa de trabalho restante",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"aggregatetimeestimate",
+         "type":"number"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "creator"
+      ],
+      "custom":false,
+      "id":"creator",
+      "key":"creator",
+      "name":"Criador",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"creator",
+         "type":"user"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "subtasks"
+      ],
+      "custom":false,
+      "id":"subtasks",
+      "key":"subtasks",
+      "name":"Subtarefas",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "items":"issuelinks",
+         "system":"subtasks",
+         "type":"array"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "cf[10040]",
+         "Source",
+         "Source[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10040",
+      "key":"customfield_10040",
+      "name":"Source",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10040,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Source"
+   },
+   {
+      "clauseNames":[
+         "cf[10041]",
+         "Implementation plan",
+         "Implementation plan[Paragraph]"
+      ],
+      "custom":true,
+      "id":"customfield_10041",
+      "key":"customfield_10041",
+      "name":"Implementation plan",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10041,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Implementation plan"
+   },
+   {
+      "clauseNames":[
+         "Backout plan",
+         "Backout plan[Paragraph]",
+         "cf[10042]"
+      ],
+      "custom":true,
+      "id":"customfield_10042",
+      "key":"customfield_10042",
+      "name":"Backout plan",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10042,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Backout plan"
+   },
+   {
+      "clauseNames":[
+         "reporter"
+      ],
+      "custom":false,
+      "id":"reporter",
+      "key":"reporter",
+      "name":"Relator",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"reporter",
+         "type":"user"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10043]",
+         "Test plan",
+         "Test plan[Paragraph]"
+      ],
+      "custom":true,
+      "id":"customfield_10043",
+      "key":"customfield_10043",
+      "name":"Test plan",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10043,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Test plan"
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"aggregateprogress",
+      "key":"aggregateprogress",
+      "name":"\u03a3 de Progresso",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"aggregateprogress",
+         "type":"progress"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "cf[10044]",
+         "Planned start",
+         "Planned start[Time stamp]"
+      ],
+      "custom":true,
+      "id":"customfield_10044",
+      "key":"customfield_10044",
+      "name":"Planned start",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+         "customId":10044,
+         "type":"datetime"
+      },
+      "searchable":true,
+      "untranslatedName":"Planned start"
+   },
+   {
+      "clauseNames":[
+         "cf[10045]",
+         "Planned end",
+         "Planned end[Time stamp]"
+      ],
+      "custom":true,
+      "id":"customfield_10045",
+      "key":"customfield_10045",
+      "name":"Planned end",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+         "customId":10045,
+         "type":"datetime"
+      },
+      "searchable":true,
+      "untranslatedName":"Planned end"
+   },
+   {
+      "clauseNames":[
+         "cf[10046]",
+         "Investigation reason",
+         "Investigation reason[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10046",
+      "key":"customfield_10046",
+      "name":"Investigation reason",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10046,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Investigation reason"
+   },
+   {
+      "clauseNames":[
+         "cf[10047]",
+         "Root cause",
+         "Root cause[Paragraph]"
+      ],
+      "custom":true,
+      "id":"customfield_10047",
+      "key":"customfield_10047",
+      "name":"Root cause",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10047,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Root cause"
+   },
+   {
+      "clauseNames":[
+         "cf[10048]",
+         "Workaround",
+         "Workaround[Paragraph]"
+      ],
+      "custom":true,
+      "id":"customfield_10048",
+      "key":"customfield_10048",
+      "name":"Workaround",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10048,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Workaround"
+   },
+   {
+      "clauseNames":[
+         "Affected services",
+         "cf[10038]"
+      ],
+      "custom":true,
+      "id":"customfield_10038",
+      "key":"customfield_10038",
+      "name":"Affected services",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugins.service-entity:service-entity-field-cftype",
+         "customId":10038,
+         "items":"service-entity-field",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Affected services"
+   },
+   {
+      "clauseNames":[
+         "cf[10039]",
+         "Severity",
+         "Severity[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10039",
+      "key":"customfield_10039",
+      "name":"Severity",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10039,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Severity"
+   },
+   {
+      "clauseNames":[
+         "progress"
+      ],
+      "custom":false,
+      "id":"progress",
+      "key":"progress",
+      "name":"Progresso",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"progress",
+         "type":"progress"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "votes"
+      ],
+      "custom":false,
+      "id":"votes",
+      "key":"votes",
+      "name":"Votos",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"votes",
+         "type":"votes"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"worklog",
+      "key":"worklog",
+      "name":"Registro de Trabalho",
+      "navigable":false,
+      "orderable":true,
+      "schema":{
+         "items":"worklog",
+         "system":"worklog",
+         "type":"array"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "issuetype",
+         "type"
+      ],
+      "custom":false,
+      "id":"issuetype",
+      "key":"issuetype",
+      "name":"Tipo de item",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"issuetype",
+         "type":"issuetype"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "timespent"
+      ],
+      "custom":false,
+      "id":"timespent",
+      "key":"timespent",
+      "name":"Tempo gasto",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"timespent",
+         "type":"number"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "cf[10150]",
+         "Telas do video wall est\u00e3o funcionais?",
+         "Telas do video wall est\u00e3o funcionais?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10150",
+      "key":"customfield_10150",
+      "name":"Telas do video wall est\u00e3o funcionais?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10150,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Telas do video wall est\u00e3o funcionais?"
+   },
+   {
+      "clauseNames":[
+         "Approvals",
+         "Approvals[Approvals]",
+         "cf[10030]"
+      ],
+      "custom":true,
+      "id":"customfield_10030",
+      "key":"customfield_10030",
+      "name":"Approvals",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk.approvals-plugin:sd-approvals",
+         "customId":10030,
+         "type":"sd-approvals"
+      },
+      "searchable":true,
+      "untranslatedName":"Approvals"
+   },
+   {
+      "clauseNames":[
+         "cf[10151]",
+         "Esta\u00e7\u00f5es de trabalho (desktop / monitores) est\u00e3o funcionais ?",
+         "Esta\u00e7\u00f5es de trabalho (desktop / monitores) est\u00e3o funcionais ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10151",
+      "key":"customfield_10151",
+      "name":"Esta\u00e7\u00f5es de trabalho (desktop / monitores) est\u00e3o funcionais ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10151,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Esta\u00e7\u00f5es de trabalho (desktop / monitores) est\u00e3o funcionais ?"
+   },
+   {
+      "clauseNames":[
+         "project"
+      ],
+      "custom":false,
+      "id":"project",
+      "key":"project",
+      "name":"Projeto",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"project",
+         "type":"project"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "Ambiente encontra-se climatizado ?",
+         "Ambiente encontra-se climatizado ?[Radio Buttons]",
+         "cf[10152]"
+      ],
+      "custom":true,
+      "id":"customfield_10152",
+      "key":"customfield_10152",
+      "name":"Ambiente encontra-se climatizado ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10152,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Ambiente encontra-se climatizado ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10031]",
+         "Request language"
+      ],
+      "custom":true,
+      "id":"customfield_10031",
+      "key":"customfield_10031",
+      "name":"Request language",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk.servicedesk-lingo-integration-plugin:sd-request-language",
+         "customId":10031,
+         "type":"sd-request-lang"
+      },
+      "searchable":true,
+      "untranslatedName":"Request language"
+   },
+   {
+      "clauseNames":[
+         "cf[10032]",
+         "Urgency",
+         "Urgency[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10032",
+      "key":"customfield_10032",
+      "name":"Urgency",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10032,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Urgency"
+   },
+   {
+      "clauseNames":[
+         "cf[10153]",
+         "Verificada as conex\u00f5es dos computadores com Video wall ?",
+         "Verificada as conex\u00f5es dos computadores com Video wall ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10153",
+      "key":"customfield_10153",
+      "name":"Verificada as conex\u00f5es dos computadores com Video wall ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10153,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificada as conex\u00f5es dos computadores com Video wall ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10033]",
+         "Pending reason",
+         "Pending reason[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10033",
+      "key":"customfield_10033",
+      "name":"Pending reason",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10033,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Pending reason"
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"aggregatetimespent",
+      "key":"aggregatetimespent",
+      "name":"\u03a3 de Tempo Gasto",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"aggregatetimespent",
+         "type":"number"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "cf[10034]",
+         "Product categorization",
+         "Product categorization[Select List (cascading)]"
+      ],
+      "custom":true,
+      "id":"customfield_10034",
+      "key":"customfield_10034",
+      "name":"Product categorization",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect",
+         "customId":10034,
+         "type":"option-with-child"
+      },
+      "searchable":true,
+      "untranslatedName":"Product categorization"
+   },
+   {
+      "clauseNames":[
+         "cf[10035]",
+         "Operational categorization",
+         "Operational categorization[Select List (cascading)]"
+      ],
+      "custom":true,
+      "id":"customfield_10035",
+      "key":"customfield_10035",
+      "name":"Operational categorization",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:cascadingselect",
+         "customId":10035,
+         "type":"option-with-child"
+      },
+      "searchable":true,
+      "untranslatedName":"Operational categorization"
+   },
+   {
+      "clauseNames":[
+         "Approver groups",
+         "Approver groups[Group Picker (multiple groups)]",
+         "cf[10036]"
+      ],
+      "custom":true,
+      "id":"customfield_10036",
+      "key":"customfield_10036",
+      "name":"Approver groups",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:multigrouppicker",
+         "customId":10036,
+         "items":"group",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Approver groups"
+   },
+   {
+      "clauseNames":[
+         "Affected hardware",
+         "Affected hardware[Short text]",
+         "cf[10037]"
+      ],
+      "custom":true,
+      "id":"customfield_10037",
+      "key":"customfield_10037",
+      "name":"Affected hardware",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10037,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Affected hardware"
+   },
+   {
+      "clauseNames":[
+         "cf[10148]",
+         "Efetuado teste de autonimia do nobreak ?",
+         "Efetuado teste de autonimia do nobreak ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10148",
+      "key":"customfield_10148",
+      "name":"Efetuado teste de autonimia do nobreak ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10148,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Efetuado teste de autonimia do nobreak ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10027]",
+         "Request participants"
+      ],
+      "custom":true,
+      "id":"customfield_10027",
+      "key":"customfield_10027",
+      "name":"Request participants",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-request-participants",
+         "customId":10027,
+         "items":"user",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Request participants"
+   },
+   {
+      "clauseNames":[
+         "cf[10149]",
+         "Foi verificado os estado das baterias do nobreak ?",
+         "Foi verificado os estado das baterias do nobreak ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10149",
+      "key":"customfield_10149",
+      "name":"Foi verificado os estado das baterias do nobreak ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10149,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Foi verificado os estado das baterias do nobreak ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10028]",
+         "Satisfaction"
+      ],
+      "custom":true,
+      "id":"customfield_10028",
+      "key":"customfield_10028",
+      "name":"Satisfaction",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-request-feedback",
+         "customId":10028,
+         "type":"sd-feedback"
+      },
+      "searchable":true,
+      "untranslatedName":"Satisfaction"
+   },
+   {
+      "clauseNames":[
+         "cf[10029]",
+         "Satisfaction date"
+      ],
+      "custom":true,
+      "id":"customfield_10029",
+      "key":"customfield_10029",
+      "name":"Satisfaction date",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-request-feedback-date",
+         "customId":10029,
+         "type":"datetime"
+      },
+      "searchable":true,
+      "untranslatedName":"Satisfaction date"
+   },
+   {
+      "clauseNames":[
+         "resolutiondate",
+         "resolved"
+      ],
+      "custom":false,
+      "id":"resolutiondate",
+      "key":"resolutiondate",
+      "name":"Resolvido",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"resolutiondate",
+         "type":"datetime"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "workratio"
+      ],
+      "custom":false,
+      "id":"workratio",
+      "key":"workratio",
+      "name":"Raz\u00e3o Trabalhada",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"workratio",
+         "type":"number"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"issuerestriction",
+      "key":"issuerestriction",
+      "name":"Restringir para",
+      "navigable":false,
+      "orderable":true,
+      "schema":{
+         "system":"issuerestriction",
+         "type":"issuerestriction"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "watchers"
+      ],
+      "custom":false,
+      "id":"watches",
+      "key":"watches",
+      "name":"Observadores",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"watches",
+         "type":"watches"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"thumbnail",
+      "key":"thumbnail",
+      "name":"Imagens",
+      "navigable":true,
+      "orderable":false,
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "created",
+         "createdDate"
+      ],
+      "custom":false,
+      "id":"created",
+      "key":"created",
+      "name":"Criado",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"created",
+         "type":"datetime"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10140]",
+         "TEMPO_MEDIO_ENTRE_STATUS",
+         "TEMPO_MEDIO_ENTRE_STATUS[Time in Status]"
+      ],
+      "custom":true,
+      "id":"customfield_10140",
+      "key":"customfield_10140",
+      "name":"TEMPO_MEDIO_ENTRE_STATUS",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.ext.charting:timeinstatus",
+         "customId":10140,
+         "type":"any"
+      },
+      "searchable":true,
+      "untranslatedName":"TEMPO_MEDIO_ENTRE_STATUS"
+   },
+   {
+      "clauseNames":[
+         "cf[10141]",
+         "Hor\u00e1rio da Visita",
+         "Hor\u00e1rio da Visita[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10141",
+      "key":"customfield_10141",
+      "name":"Hor\u00e1rio da Visita",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10141,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Hor\u00e1rio da Visita"
+   },
+   {
+      "clauseNames":[
+         "cf[10020]",
+         "Sprint"
+      ],
+      "custom":true,
+      "id":"customfield_10020",
+      "key":"customfield_10020",
+      "name":"Sprint",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:gh-sprint",
+         "customId":10020,
+         "items":"json",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Sprint"
+   },
+   {
+      "clauseNames":[
+         "cf[10021]",
+         "Flagged",
+         "Flagged[Checkboxes]"
+      ],
+      "custom":true,
+      "id":"customfield_10021",
+      "key":"customfield_10021",
+      "name":"Flagged",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes",
+         "customId":10021,
+         "items":"option",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Flagged"
+   },
+   {
+      "clauseNames":[
+         "cf[10022]",
+         "Target start"
+      ],
+      "custom":true,
+      "id":"customfield_10022",
+      "key":"customfield_10022",
+      "name":"Target start",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jpo:jpo-custom-field-baseline-start",
+         "customId":10022,
+         "type":"date"
+      },
+      "searchable":true,
+      "untranslatedName":"Target start"
+   },
+   {
+      "clauseNames":[
+         "cf[10143]",
+         "Terceiros",
+         "Terceiros[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10143",
+      "key":"customfield_10143",
+      "name":"Terceiros",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10143,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Terceiros"
+   },
+   {
+      "clauseNames":[
+         "cf[10144]",
+         "Fim da Visita",
+         "Fim da Visita[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10144",
+      "key":"customfield_10144",
+      "name":"Fim da Visita",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10144,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Fim da Visita"
+   },
+   {
+      "clauseNames":[
+         "cf[10023]",
+         "Target end"
+      ],
+      "custom":true,
+      "id":"customfield_10023",
+      "key":"customfield_10023",
+      "name":"Target end",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jpo:jpo-custom-field-baseline-end",
+         "customId":10023,
+         "type":"date"
+      },
+      "searchable":true,
+      "untranslatedName":"Target end"
+   },
+   {
+      "clauseNames":[
+         "cf[10145]",
+         "Verificada a limpeza e organiza\u00e7\u00e3o interna das mesas ?",
+         "Verificada a limpeza e organiza\u00e7\u00e3o interna das mesas ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10145",
+      "key":"customfield_10145",
+      "name":"Verificada a limpeza e organiza\u00e7\u00e3o interna das mesas ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10145,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificada a limpeza e organiza\u00e7\u00e3o interna das mesas ?"
+   },
+   {
+      "clauseNames":[
+         "[CHART] Date of First Response",
+         "[CHART] Date of First Response[Date of first response]",
+         "cf[10024]"
+      ],
+      "custom":true,
+      "id":"customfield_10024",
+      "key":"customfield_10024",
+      "name":"[CHART] Date of First Response",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.ext.charting:firstresponsedate",
+         "customId":10024,
+         "type":"datetime"
+      },
+      "searchable":true,
+      "untranslatedName":"[CHART] Date of First Response"
+   },
+   {
+      "clauseNames":[
+         "cf[10146]",
+         "Verificada as conex\u00f5es de rede dos computadores ?",
+         "Verificada as conex\u00f5es de rede dos computadores ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10146",
+      "key":"customfield_10146",
+      "name":"Verificada as conex\u00f5es de rede dos computadores ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10146,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificada as conex\u00f5es de rede dos computadores ?"
+   },
+   {
+      "clauseNames":[
+         "[CHART] Time in Status",
+         "[CHART] Time in Status[Time in Status]",
+         "cf[10025]"
+      ],
+      "custom":true,
+      "id":"customfield_10025",
+      "key":"customfield_10025",
+      "name":"[CHART] Time in Status",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.ext.charting:timeinstatus",
+         "customId":10025,
+         "type":"any"
+      },
+      "searchable":true,
+      "untranslatedName":"[CHART] Time in Status"
+   },
+   {
+      "clauseNames":[
+         "cf[10147]",
+         "Verificada as conex\u00f5es do controlador com telas do Video wall?",
+         "Verificada as conex\u00f5es do controlador com telas do Video wall?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10147",
+      "key":"customfield_10147",
+      "name":"Verificada as conex\u00f5es do controlador com telas do Video wall?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10147,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificada as conex\u00f5es do controlador com telas do Video wall?"
+   },
+   {
+      "clauseNames":[
+         "cf[10026]",
+         "Work category"
+      ],
+      "custom":true,
+      "id":"customfield_10026",
+      "key":"customfield_10026",
+      "name":"Categoria de trabalho",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugins.work-category-field:work-category-field-cftype",
+         "customId":10026,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Work category"
+   },
+   {
+      "clauseNames":[
+         "cf[10016]",
+         "Story point estimate"
+      ],
+      "custom":true,
+      "id":"customfield_10016",
+      "key":"customfield_10016",
+      "name":"Story point estimate",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:jsw-story-points",
+         "customId":10016,
+         "type":"number"
+      },
+      "searchable":true,
+      "untranslatedName":"Story point estimate"
+   },
+   {
+      "clauseNames":[
+         "cf[10017]",
+         "Issue color"
+      ],
+      "custom":true,
+      "id":"customfield_10017",
+      "key":"customfield_10017",
+      "name":"Issue color",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:jsw-issue-color",
+         "customId":10017,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Issue color"
+   },
+   {
+      "clauseNames":[
+         "cf[10139]",
+         "Data da Visita",
+         "Data da Visita[Date]"
+      ],
+      "custom":true,
+      "id":"customfield_10139",
+      "key":"customfield_10139",
+      "name":"Data da Visita",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+         "customId":10139,
+         "type":"date"
+      },
+      "searchable":true,
+      "untranslatedName":"Data da Visita"
+   },
+   {
+      "clauseNames":[
+         "cf[10018]",
+         "Parent Link"
+      ],
+      "custom":true,
+      "id":"customfield_10018",
+      "key":"customfield_10018",
+      "name":"Parent Link",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jpo:jpo-custom-field-parent",
+         "customId":10018,
+         "type":"any"
+      },
+      "searchable":true,
+      "untranslatedName":"Parent Link"
+   },
+   {
+      "clauseNames":[
+         "cf[10019]",
+         "Rank"
+      ],
+      "custom":true,
+      "id":"customfield_10019",
+      "key":"customfield_10019",
+      "name":"Rank",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:gh-lexo-rank",
+         "customId":10019,
+         "type":"any"
+      },
+      "searchable":true,
+      "untranslatedName":"Rank"
+   },
+   {
+      "clauseNames":[
+         "updated",
+         "updatedDate"
+      ],
+      "custom":false,
+      "id":"updated",
+      "key":"updated",
+      "name":"Atualizado(a)",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"updated",
+         "type":"datetime"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "originalEstimate",
+         "timeoriginalestimate"
+      ],
+      "custom":false,
+      "id":"timeoriginalestimate",
+      "key":"timeoriginalestimate",
+      "name":"Estimativa original",
+      "navigable":true,
+      "orderable":false,
+      "schema":{
+         "system":"timeoriginalestimate",
+         "type":"number"
+      },
+      "searchable":false
+   },
+   {
+      "clauseNames":[
+         "description"
+      ],
+      "custom":false,
+      "id":"description",
+      "key":"description",
+      "name":"Descri\u00e7\u00e3o",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"description",
+         "type":"string"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10130]",
+         "Verificou se conex\u00f5es de rede do modem e sua conectividade com a central est\u00e3o ok?",
+         "Verificou se conex\u00f5es de rede do modem e sua conectividade com a central est\u00e3o ok?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10130",
+      "key":"customfield_10130",
+      "name":"Verificou se conex\u00f5es de rede do modem e sua conectividade com a central est\u00e3o ok?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10130,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificou se conex\u00f5es de rede do modem e sua conectividade com a central est\u00e3o ok?"
+   },
+   {
+      "clauseNames":[
+         "cf[10131]",
+         "Desligou os programas em execu\u00e7\u00e3o e ativou todos novamente?",
+         "Desligou os programas em execu\u00e7\u00e3o e ativou todos novamente?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10131",
+      "key":"customfield_10131",
+      "name":"Desligou os programas em execu\u00e7\u00e3o e ativou todos novamente?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10131,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Desligou os programas em execu\u00e7\u00e3o e ativou todos novamente?"
+   },
+   {
+      "clauseNames":[
+         "cf[10010]",
+         "Request Type"
+      ],
+      "custom":true,
+      "id":"customfield_10010",
+      "key":"customfield_10010",
+      "name":"Request Type",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:vp-origin",
+         "customId":10010,
+         "type":"sd-customerrequesttype"
+      },
+      "searchable":true,
+      "untranslatedName":"Request Type"
+   },
+   {
+      "clauseNames":[
+         "As tens\u00f5es da caixa de c\u00e2mera est\u00e3o ok?",
+         "As tens\u00f5es da caixa de c\u00e2mera est\u00e3o ok?[Radio Buttons]",
+         "cf[10132]"
+      ],
+      "custom":true,
+      "id":"customfield_10132",
+      "key":"customfield_10132",
+      "name":"As tens\u00f5es da caixa de c\u00e2mera est\u00e3o ok?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10132,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"As tens\u00f5es da caixa de c\u00e2mera est\u00e3o ok?"
+   },
+   {
+      "clauseNames":[
+         "cf[10011]",
+         "Epic Name"
+      ],
+      "custom":true,
+      "id":"customfield_10011",
+      "key":"customfield_10011",
+      "name":"Epic Name",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:gh-epic-label",
+         "customId":10011,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Epic Name"
+   },
+   {
+      "clauseNames":[
+         "As tens\u00f5es da caixa do iluminador est\u00e3o ok?",
+         "As tens\u00f5es da caixa do iluminador est\u00e3o ok?[Radio Buttons]",
+         "cf[10133]"
+      ],
+      "custom":true,
+      "id":"customfield_10133",
+      "key":"customfield_10133",
+      "name":"As tens\u00f5es da caixa do iluminador est\u00e3o ok?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10133,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"As tens\u00f5es da caixa do iluminador est\u00e3o ok?"
+   },
+   {
+      "clauseNames":[
+         "cf[10012]",
+         "Epic Status"
+      ],
+      "custom":true,
+      "id":"customfield_10012",
+      "key":"customfield_10012",
+      "name":"Epic Status",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:gh-epic-status",
+         "customId":10012,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Epic Status"
+   },
+   {
+      "clauseNames":[
+         "As tens\u00f5es do gabinete est\u00e3o ok?",
+         "As tens\u00f5es do gabinete est\u00e3o ok?[Radio Buttons]",
+         "cf[10134]"
+      ],
+      "custom":true,
+      "id":"customfield_10134",
+      "key":"customfield_10134",
+      "name":"As tens\u00f5es do gabinete est\u00e3o ok?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10134,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"As tens\u00f5es do gabinete est\u00e3o ok?"
+   },
+   {
+      "clauseNames":[
+         "cf[10013]",
+         "Epic Color"
+      ],
+      "custom":true,
+      "id":"customfield_10013",
+      "key":"customfield_10013",
+      "name":"Epic Color",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:gh-epic-color",
+         "customId":10013,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Epic Color"
+   },
+   {
+      "clauseNames":[
+         "cf[10014]",
+         "Epic Link"
+      ],
+      "custom":true,
+      "id":"customfield_10014",
+      "key":"customfield_10014",
+      "name":"Epic Link",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.pyxis.greenhopper.jira:gh-epic-link",
+         "customId":10014,
+         "type":"any"
+      },
+      "searchable":true,
+      "untranslatedName":"Epic Link"
+   },
+   {
+      "clauseNames":[
+         "cf[10135]",
+         "T\u00c9CNICO VELSIS",
+         "T\u00c9CNICO VELSIS[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10135",
+      "key":"customfield_10135",
+      "name":"T\u00c9CNICO VELSIS",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10135,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"T\u00c9CNICO VELSIS"
+   },
+   {
+      "clauseNames":[
+
+      ],
+      "custom":false,
+      "id":"timetracking",
+      "key":"timetracking",
+      "name":"Controle de tempo",
+      "navigable":false,
+      "orderable":true,
+      "schema":{
+         "system":"timetracking",
+         "type":"timetracking"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10015]",
+         "Start date",
+         "Start date[Date]"
+      ],
+      "custom":true,
+      "id":"customfield_10015",
+      "key":"customfield_10015",
+      "name":"Start date",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:datepicker",
+         "customId":10015,
+         "type":"date"
+      },
+      "searchable":true,
+      "untranslatedName":"Start date"
+   },
+   {
+      "clauseNames":[
+         "cf[10005]",
+         "Change type",
+         "Change type[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10005",
+      "key":"customfield_10005",
+      "name":"Change type",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10005,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Change type"
+   },
+   {
+      "clauseNames":[
+         "cf[10126]",
+         "Realizou inspe\u00e7\u00e3o visual dos cabos de rede e energia?",
+         "Realizou inspe\u00e7\u00e3o visual dos cabos de rede e energia?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10126",
+      "key":"customfield_10126",
+      "name":"Realizou inspe\u00e7\u00e3o visual dos cabos de rede e energia?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10126,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Realizou inspe\u00e7\u00e3o visual dos cabos de rede e energia?"
+   },
+   {
+      "clauseNames":[
+         "cf[10006]",
+         "Change risk",
+         "Change risk[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10006",
+      "key":"customfield_10006",
+      "name":"Change risk",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10006,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Change risk"
+   },
+   {
+      "clauseNames":[
+         "cf[10127]",
+         "Verificou os Iluminadores?",
+         "Verificou os Iluminadores?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10127",
+      "key":"customfield_10127",
+      "name":"Verificou os Iluminadores?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10127,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificou os Iluminadores?"
+   },
+   {
+      "clauseNames":[
+         "level"
+      ],
+      "custom":false,
+      "id":"security",
+      "key":"security",
+      "name":"N\u00edvel de Seguran\u00e7a",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"security",
+         "type":"securitylevel"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10007]",
+         "Change reason",
+         "Change reason[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10007",
+      "key":"customfield_10007",
+      "name":"Change reason",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10007,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Change reason"
+   },
+   {
+      "clauseNames":[
+         "cf[10128]",
+         "Verificou se existe alertas de funcionamento do Software?",
+         "Verificou se existe alertas de funcionamento do Software?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10128",
+      "key":"customfield_10128",
+      "name":"Verificou se existe alertas de funcionamento do Software?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10128,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificou se existe alertas de funcionamento do Software?"
+   },
+   {
+      "clauseNames":[
+         "Actual start",
+         "Actual start[Time stamp]",
+         "cf[10008]"
+      ],
+      "custom":true,
+      "id":"customfield_10008",
+      "key":"customfield_10008",
+      "name":"Actual start",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+         "customId":10008,
+         "type":"datetime"
+      },
+      "searchable":true,
+      "untranslatedName":"Actual start"
+   },
+   {
+      "clauseNames":[
+         "cf[10129]",
+         "Verificou as configura\u00e7\u00f5es do Software?",
+         "Verificou as configura\u00e7\u00f5es do Software?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10129",
+      "key":"customfield_10129",
+      "name":"Verificou as configura\u00e7\u00f5es do Software?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10129,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificou as configura\u00e7\u00f5es do Software?"
+   },
+   {
+      "clauseNames":[
+         "attachments"
+      ],
+      "custom":false,
+      "id":"attachment",
+      "key":"attachment",
+      "name":"Anexo",
+      "navigable":false,
+      "orderable":true,
+      "schema":{
+         "items":"attachment",
+         "system":"attachment",
+         "type":"array"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "Actual end",
+         "Actual end[Time stamp]",
+         "cf[10009]"
+      ],
+      "custom":true,
+      "id":"customfield_10009",
+      "key":"customfield_10009",
+      "name":"Actual end",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:datetime",
+         "customId":10009,
+         "type":"datetime"
+      },
+      "searchable":true,
+      "untranslatedName":"Actual end"
+   },
+   {
+      "clauseNames":[
+         "summary"
+      ],
+      "custom":false,
+      "id":"summary",
+      "key":"summary",
+      "name":"Resumo",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"summary",
+         "type":"string"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10080]",
+         "Respons\u00e1vel",
+         "Respons\u00e1vel[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10080",
+      "key":"customfield_10080",
+      "name":"Respons\u00e1vel",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10080,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Respons\u00e1vel"
+   },
+   {
+      "clauseNames":[
+         "cf[10081]",
+         "Contato",
+         "Contato[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10081",
+      "key":"customfield_10081",
+      "name":"Contato",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10081,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Contato"
+   },
+   {
+      "clauseNames":[
+         "cf[10082]",
+         "Usu\u00e1rio no DSS",
+         "Usu\u00e1rio no DSS[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10082",
+      "key":"customfield_10082",
+      "name":"Usu\u00e1rio no DSS",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10082,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Usu\u00e1rio no DSS"
+   },
+   {
+      "clauseNames":[
+         "cf[10083]",
+         "Vandalizado",
+         "Vandalizado[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10083",
+      "key":"customfield_10083",
+      "name":"Vandalizado",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10083,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Vandalizado"
+   },
+   {
+      "clauseNames":[
+         "cf[10084]",
+         "Troca de Materias",
+         "Troca de Materias[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10084",
+      "key":"customfield_10084",
+      "name":"Troca de Materias",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10084,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Troca de Materias"
+   },
+   {
+      "clauseNames":[
+         "BU",
+         "BU[Number]",
+         "cf[10085]"
+      ],
+      "custom":true,
+      "id":"customfield_10085",
+      "key":"customfield_10085",
+      "name":"BU",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:float",
+         "customId":10085,
+         "type":"number"
+      },
+      "searchable":true,
+      "untranslatedName":"BU"
+   },
+   {
+      "clauseNames":[
+         "cf[10086]",
+         "Chamado de Refer\u00eancia",
+         "Chamado de Refer\u00eancia[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10086",
+      "key":"customfield_10086",
+      "name":"Chamado de Refer\u00eancia",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10086,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Chamado de Refer\u00eancia"
+   },
+   {
+      "clauseNames":[
+         "cf[10120]",
+         "Fechaduras e parafusos est\u00e3o ok?",
+         "Fechaduras e parafusos est\u00e3o ok?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10120",
+      "key":"customfield_10120",
+      "name":"Fechaduras e parafusos est\u00e3o ok?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10120,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Fechaduras e parafusos est\u00e3o ok?"
+   },
+   {
+      "clauseNames":[
+         "cf[10121]",
+         "Realizou limpeza interna do Gabinete?",
+         "Realizou limpeza interna do Gabinete?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10121",
+      "key":"customfield_10121",
+      "name":"Realizou limpeza interna do Gabinete?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10121,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Realizou limpeza interna do Gabinete?"
+   },
+   {
+      "clauseNames":[
+         "cf[10000]",
+         "development"
+      ],
+      "custom":true,
+      "id":"customfield_10000",
+      "key":"customfield_10000",
+      "name":"development",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugins.jira-development-integration-plugin:devsummarycf",
+         "customId":10000,
+         "type":"any"
+      },
+      "searchable":true,
+      "untranslatedName":"development"
+   },
+   {
+      "clauseNames":[
+         "cf[10122]",
+         "Realizou limpeza de todos os conetores do equipamento?",
+         "Realizou limpeza de todos os conetores do equipamento?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10122",
+      "key":"customfield_10122",
+      "name":"Realizou limpeza de todos os conetores do equipamento?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10122,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Realizou limpeza de todos os conetores do equipamento?"
+   },
+   {
+      "clauseNames":[
+         "cf[10001]",
+         "Team",
+         "Team[Team]"
+      ],
+      "custom":true,
+      "id":"customfield_10001",
+      "key":"customfield_10001",
+      "name":"Team",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "configuration":{
+            "com.atlassian.jira.plugin.system.customfieldtypes:atlassian-team":true
+         },
+         "custom":"com.atlassian.teams:rm-teams-custom-field-team",
+         "customId":10001,
+         "type":"any"
+      },
+      "searchable":true,
+      "untranslatedName":"Team"
+   },
+   {
+      "clauseNames":[
+         "cf[10002]",
+         "Organizations"
+      ],
+      "custom":true,
+      "id":"customfield_10002",
+      "key":"customfield_10002",
+      "name":"Organizations",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.servicedesk:sd-customer-organizations",
+         "customId":10002,
+         "items":"sd-customerorganization",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Organizations"
+   },
+   {
+      "clauseNames":[
+         "cf[10123]",
+         "Tens\u00e3o da energia el\u00e9trica de entrada est\u00e1 ok?",
+         "Tens\u00e3o da energia el\u00e9trica de entrada est\u00e1 ok?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10123",
+      "key":"customfield_10123",
+      "name":"Tens\u00e3o da energia el\u00e9trica de entrada est\u00e1 ok?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10123,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Tens\u00e3o da energia el\u00e9trica de entrada est\u00e1 ok?"
+   },
+   {
+      "clauseNames":[
+         "Approvers",
+         "Approvers[User Picker (multiple users)]",
+         "cf[10003]"
+      ],
+      "custom":true,
+      "id":"customfield_10003",
+      "key":"customfield_10003",
+      "name":"Approvers",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:multiuserpicker",
+         "customId":10003,
+         "items":"user",
+         "type":"array"
+      },
+      "searchable":true,
+      "untranslatedName":"Approvers"
+   },
+   {
+      "clauseNames":[
+         "cf[10124]",
+         "Realizou limpeza e verifica\u00e7\u00e3o das caixas de c\u00e2meras?",
+         "Realizou limpeza e verifica\u00e7\u00e3o das caixas de c\u00e2meras?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10124",
+      "key":"customfield_10124",
+      "name":"Realizou limpeza e verifica\u00e7\u00e3o das caixas de c\u00e2meras?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10124,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Realizou limpeza e verifica\u00e7\u00e3o das caixas de c\u00e2meras?"
+   },
+   {
+      "clauseNames":[
+         "cf[10004]",
+         "Impact",
+         "Impact[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10004",
+      "key":"customfield_10004",
+      "name":"Impact",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10004,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Impact"
+   },
+   {
+      "clauseNames":[
+         "cf[10125]",
+         "Realizou limpeza dos filtros do Coolers?",
+         "Realizou limpeza dos filtros do Coolers?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10125",
+      "key":"customfield_10125",
+      "name":"Realizou limpeza dos filtros do Coolers?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10125,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Realizou limpeza dos filtros do Coolers?"
+   },
+   {
+      "clauseNames":[
+         "cf[10115]",
+         "Verificada a conectividade com o DSS ?",
+         "Verificada a conectividade com o DSS ?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10115",
+      "key":"customfield_10115",
+      "name":"Verificada a conectividade com o DSS ?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10115,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Verificada a conectividade com o DSS ?"
+   },
+   {
+      "clauseNames":[
+         "cf[10116]",
+         "T\u00c9CNICO PERKONS",
+         "T\u00c9CNICO PERKONS[Dropdown]"
+      ],
+      "custom":true,
+      "id":"customfield_10116",
+      "key":"customfield_10116",
+      "name":"T\u00c9CNICO PERKONS",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:select",
+         "customId":10116,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"T\u00c9CNICO PERKONS"
+   },
+   {
+      "clauseNames":[
+         "environment"
+      ],
+      "custom":false,
+      "id":"environment",
+      "key":"environment",
+      "name":"Ambiente",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"environment",
+         "type":"string"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "cf[10117]",
+         "COORDENADA",
+         "COORDENADA[Short text]"
+      ],
+      "custom":true,
+      "id":"customfield_10117",
+      "key":"customfield_10117",
+      "name":"COORDENADA",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textfield",
+         "customId":10117,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"COORDENADA"
+   },
+   {
+      "clauseNames":[
+         "cf[10118]",
+         "Endere\u00e7oAproximado",
+         "Endere\u00e7oAproximado[Paragraph]"
+      ],
+      "custom":true,
+      "id":"customfield_10118",
+      "key":"customfield_10118",
+      "name":"Endere\u00e7oAproximado",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
+         "customId":10118,
+         "type":"string"
+      },
+      "searchable":true,
+      "untranslatedName":"Endere\u00e7oAproximado"
+   },
+   {
+      "clauseNames":[
+         "cf[10119]",
+         "Realizou a Inspe\u00e7\u00e3o visual do equipamento externamente e internamente?",
+         "Realizou a Inspe\u00e7\u00e3o visual do equipamento externamente e internamente?[Radio Buttons]"
+      ],
+      "custom":true,
+      "id":"customfield_10119",
+      "key":"customfield_10119",
+      "name":"Realizou a Inspe\u00e7\u00e3o visual do equipamento externamente e internamente?",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "custom":"com.atlassian.jira.plugin.system.customfieldtypes:radiobuttons",
+         "customId":10119,
+         "type":"option"
+      },
+      "searchable":true,
+      "untranslatedName":"Realizou a Inspe\u00e7\u00e3o visual do equipamento externamente e internamente?"
+   },
+   {
+      "clauseNames":[
+         "due",
+         "duedate"
+      ],
+      "custom":false,
+      "id":"duedate",
+      "key":"duedate",
+      "name":"Data limite",
+      "navigable":true,
+      "orderable":true,
+      "schema":{
+         "system":"duedate",
+         "type":"date"
+      },
+      "searchable":true
+   },
+   {
+      "clauseNames":[
+         "comment"
+      ],
+      "custom":false,
+      "id":"comment",
+      "key":"comment",
+      "name":"Comentar",
+      "navigable":false,
+      "orderable":true,
+      "schema":{
+         "system":"comment",
+         "type":"comments-page"
+      },
+      "searchable":true
+   }
+]

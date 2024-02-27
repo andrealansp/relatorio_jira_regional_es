@@ -1,0 +1,12 @@
+body p {
+    font-size: 12px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.info {
+font-size: 10px;
+font-weight: bold;
+box-sizing: border-box;
+color: #483285;
+}

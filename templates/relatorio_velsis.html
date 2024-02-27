@@ -1,0 +1,92 @@
+{% extends 'template_relatorio.html' %}
+{% block content %}
+<section class="container-fluid">
+    {% for key,value in resposta.items() %}
+    <div class="row justify-content-between">
+        <div class="col-2">
+            <img src="{{url_for('static',filename='logo.png')}}" class="img-fluid" alt="LogoConsórcio">
+        </div>
+        <div class="col-2">
+            <img src="{{url_for('static',filename='logoDETRAN.png')}}" class="img-fluid" align="right" alt="Logo Empresa do Consórcio">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+         <div class="col-8 text-center ">
+            <h6 class="align-middle">{{key}}-{{value['summary']}}</h6>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 border border-secondary-subtle">
+            <p>SITE: {{value['customfield_10060']['value']}} - {{value['customfield_10060']['child']['value']}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 border border-secondary-subtle">
+            <p>COORDENADOR:<br>RICARDO GONÇALVES</p>
+        </div>
+        <div class="col-6 border border-secondary-subtle">
+            <p>TÉCNICO:<br>{{value['customfield_10135']['value']}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 border border-secondary-subtle">
+            <p>STATUS EQUIPAMENTO: <br>OPERANDO</p>
+        </div>
+        <div class="col-6 border border-secondary-subtle">
+            <p>COORDENADA: <br>{{value['customfield_10117']}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 border border-secondary-subtle">
+            <p>MOTIVO DA VISITA:<br>PREVENTIVAS</p>
+        </div>
+        <div class="col-6 border border-secondary-subtle">
+            <p>ENDEREÇO:<br>{{value['customfield_10118']['content'][0]['content'][0]['text']}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 border border-secondary-subtle">
+            <p>DATA DA ABERTURA DO CHAMADO: <br> {{value['created']|datetime_format}}</p>
+        </div>
+        <div class="col-6 border border-secondary-subtle">
+            <p>DATA DO FECHAMENTO DO CHAMADO: <br> {{value['resolutiondate']|datetime_format}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 border border-secondary-subtle">
+            <br>
+            <h6>Checklist de atendimento para manutenção preventiva</h6>
+            <p>1-Realizou limpeza e verificação das caixas de câmeras? - {{value['customfield_10124']['value']}}</p>
+            <p>2-Fechaduras e parafusos estão ok? - {{value['customfield_10120']['value']}}</p>
+            <p>3-Realizou limpeza interna do Gabinete? - {{value['customfield_10121']['value']}}</p>
+            <p>4-Realizou limpeza de todos os conectores do equipamento? - {{value['customfield_10122']['value']}}</p>
+            <p>5-Realizou limpeza dos filtros do Coolers? - {{value['customfield_10125']['value']}}</p>
+            <p>6-Realizou inspeção visual dos cabos de rede e energia? - {{value['customfield_10126']['value']}}</p>
+            <p>7-Verificou os Iluminadores? - {{value['customfield_10127']['value']}}</p>
+            <p>8-Verificou se existe alertas de funcionamento do Software? - {{value['customfield_10128']['value']}}</p>
+            <p>9-Verificou as configurações do Software? - {{value['customfield_10129']['value']}}</p>
+            <p>10-Verificou se conexões de rede do modem e sua conectividade com a central estão ok? - {{value['customfield_10130']['value']}}</p>
+            <p>11-Desligou os programas em execução e ativou todos novamente? - {{value['customfield_10131']['value']}}</p>
+            <p>12-As tensões da caixa de câmera estão ok? - >{{value['customfield_10132']['value']}}</p>
+            <p>13-As tensões da caixa do iluminador estão ok? - {{value['customfield_10133']['value']}}</p>
+            <p>14-As tensões do gabinete estão ok? - {{value['customfield_10134']['value']}}</p>
+        </div>
+    </div>
+    <div style="break-after:page"></div>
+    <div class="row">
+        <div class="col-12">
+            <div class="row justify-content-center">
+                <br>
+                <h6>Evidências da visita no local</h6>
+                {%for anexo in anexos[key]%}
+                <div class="col-5 m-3">
+                    <img src="{{anexo}}" alt="imagem" class="img-fluid">
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+    </div>
+    <div style="break-after:page"></div>
+    {% endfor %}
+</section>
+{% endblock %}
