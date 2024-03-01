@@ -1,14 +1,17 @@
 import json
 import math
-import os
-from pprint import pprint
-from jira import JIRA
-from PIL import Image
 from io import StringIO
+from pprint import pprint
 
+import jirapt
 import requests
+from jira import JIRA
+from jira.client import ResultList
+from jira.resources import Issue
+from typing import cast, List
 from requests.auth import HTTPBasicAuth
-from config import API_TOKEN, USUARIO, URL
+
+from config import API_TOKEN, USUARIO
 
 
 class JiraReporter:
@@ -20,9 +23,14 @@ class JiraReporter:
         self.__lista_de_chamados = {}
         self.__pgs = 0
         self.__chave = None
+        self.__jira = instancia_jira = JIRA(server=self.__url, basic_auth=(self.__usuario, self.__senha))
 
     def __repr__(self):
         return f"{self.__jql, self.__url, self.__usuario}"
+
+    def executa_cursor(self):
+        myself = self.__jira.myself()
+        issues = cast(ResultList[Issue], jirapt.search_issues(self.__jira, self.__jql, 4,fields="key"))
 
     def paginacao_qtd_paginas(self):
         url = self.__url
@@ -361,7 +369,6 @@ class JiraReporter:
         imagem = attachment.get()
         imgPillow = StringIO.read(imagem)
         return imgPillow
-
 
         # diretorio = "static"+os.sep+"relatorios"+os.sep+"imagens"
         # arquivo = f"{diretorio}{os.sep}{chave}-{id}.jpg"

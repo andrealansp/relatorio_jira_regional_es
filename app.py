@@ -5,6 +5,11 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_wtf.csrf import CSRFProtect
 from acessojira import JiraReporter
+from waitress import serve
+import logging
+
+logger = logging.getLogger('waitress')
+logger.setLevel(logging.INFO)
 
 
 app = Flask(__name__)
@@ -42,4 +47,4 @@ from views_relatorios import *
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    serve(app, listen='*:8080')
