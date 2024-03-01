@@ -25,6 +25,9 @@ def create_users(*args, **kwargs):
     senha = gerar_hash_senha(senha='M@teus1128')
     user = Usuarios(usuario='a.alves', email='a.alves@perkons.com', senha=senha)
     db.session.add(user)
+    senha1 = gerar_hash_senha(senha='relatorio@1234')
+    user1 = Usuarios(usuario='relatorio', email='alexander.s@perkons.com', senha=senha1)
+    db.session.add(user1)
     db.session.commit()
 
 

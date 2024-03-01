@@ -3,7 +3,7 @@ from wtforms import StringField, SubmitField, PasswordField, validators, DateFie
 
 
 class FormularioUsuario(FlaskForm):
-    usuario = StringField('Usuario', [validators.data_required(), validators.Length(min=1, max=8)])
+    usuario = StringField('Usuario', [validators.data_required(), validators.Length(min=1, max=12)])
     senha = PasswordField('Senha', [validators.data_required(), validators.Length(min=1, max=100)])
     login = SubmitField('LOGAR')
 

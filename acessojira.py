@@ -3,6 +3,8 @@ import math
 import os
 from pprint import pprint
 from jira import JIRA
+from PIL import Image
+from io import StringIO
 
 import requests
 from requests.auth import HTTPBasicAuth
@@ -317,8 +319,7 @@ class JiraReporter:
         self.__chave = response_anexos['key']
 
         for anexo in response_anexos.get('fields').get('attachment'):
-            #self.baixar_anexos(anexo['id'], self.__chave)
-            lista_anexo.append(anexo['content'])
+            lista_anexo.append((anexo['content'], anexo['id']))
 
         return lista_anexo
 
@@ -357,7 +358,16 @@ class JiraReporter:
     def baixar_anexos(id, chave):
         instancia_jira = JIRA(server="https://servicedeskpedrasverdes.atlassian.net", basic_auth=(USUARIO, API_TOKEN))
         attachment = instancia_jira.attachment(id)  # 12345 is attachment_key
-        image = attachment.get()
-        diretorio = "static"+os.sep+"relatorios"+os.sep+"imagens"
-        with open(f"{diretorio}{os.sep}{chave}-{id}.jpg", 'wb') as f:
-            f.write(image)
+        imagem = attachment.get()
+        imgPillow = StringIO.read(imagem)
+        return imgPillow
+
+
+        # diretorio = "static"+os.sep+"relatorios"+os.sep+"imagens"
+        # arquivo = f"{diretorio}{os.sep}{chave}-{id}.jpg"
+        # if not os.path.exists(arquivo):
+        #     with open(arquivo, 'wb') as f:
+        #         f.write(image)
+        #     return arquivo
+        # else:
+        #     return arquivo

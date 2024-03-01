@@ -1,11 +1,10 @@
 import datetime
 import os
-import json
+from io import BytesIO
 
-import requests
 from fpdf import FPDF
-from requests.auth import HTTPBasicAuth
-from config import USUARIO, API_TOKEN
+
+import acessojira
 
 
 class PDF(FPDF):
@@ -127,5 +126,22 @@ class PDF(FPDF):
             self.cell(w=0, h=1, text=f"Evidências da visita no local",
                       align="L", new_x="LMARGIN", new_y="NEXT")
 
+            def desenhalinha(imagem, local):
+                posicao = [(2, 2), (11, 2), (2, 14), (11, 14)]
+                self.image(imagem, posicao[local][0], posicao[local][1], 8)
+
+            count = 0
+
+            for indice, anexo in enumerate(anexos.get(chave), 0):
+                print("#" * indice, anexo[1], count)
+                imagem = acessojira.JiraReporter.baixar_anexos(anexo[1], chave)
+                desenhalinha(imagem, count)
+                count = count + 1
+                if count > 3:
+                    count = 0
+                    self.add_page()
+
         self.output(f"static{os.sep}relatorios{os.sep}{datetime.date.today().year}-{datetime.date.today().month}.pdf")
-        return os.path.basename("relatorio.pdf")
+
+        return os.path.basename(
+            f"static{os.sep}relatorios{os.sep}{datetime.date.today().year}-{datetime.date.today().month}.pdf")

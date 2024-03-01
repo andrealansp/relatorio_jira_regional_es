@@ -101,7 +101,7 @@
                 <h6>Evidências da visita no local <span class="info">Quantidade de anexos: {{anexos[key]|length}}</span> </h6>
                 {%for anexo in anexos[key]%}
                 <div class="col-5 m-3">
-                    <img src="{{anexo}}" alt="imagem" class="img-fluid">
+                    <img src="{{anexo[0]}}" alt="imagem" class="img-fluid">
                 </div>
                 {%endfor%}
             </div>
