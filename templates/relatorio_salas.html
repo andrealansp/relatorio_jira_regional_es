@@ -85,7 +85,7 @@
                 <h6>Evidências da visita no local</h6>
                 {%for anexo in anexos[key]%}
                 <div class="col-5 m-3">
-                    <img src="{{anexo}}" alt="imagem" class="img-fluid">
+                    <img src="{{anexo['content']}}" alt="imagem" class="img-fluid">
                 </div>
                 {%endfor%}
             </div>

@@ -1,8 +1,12 @@
+import traceback
+import logging
 from flask import render_template, request, redirect, session, flash, url_for
 
 from acessojira import JiraReporter
 from app import app
 from helpers import FormularioVelsis
+
+logging.basicConfig(level=logging.INFO, filename="views_velsis.log", format="%(asctime)s - %(levelname)s - %(message)s")
 
 
 @app.route("/velsis", methods=['GET', ])
@@ -13,7 +17,7 @@ def velsis():
     return render_template('velsis.html', form=formulario, titulo="Preventivas - Balanças")
 
 
-@app.route("/preventivasvelsis", methods=['POST', ])
+@app.route("/preventivas_velsis", methods=['POST', ])
 def preventivasvelsis():
     if 'usuario_logado' not in session or session['usuario_logado'] is None:
         return redirect(url_for('login'))
@@ -26,13 +30,13 @@ def preventivasvelsis():
             AND issuetype = "Preventiva Balança" AND status = Resolved AND creator in
             (qm:ba8a45d0-c8a8-4107-98fe-bfc59d6bde38:70e33655-0037-42f7-94ef-d8503e158e39) 
             ORDER BY created ASC, cf[10060] ASC, creator DESC, issuetype ASC, timespent DESC, cf[10061] DESC"""
-        url = app.config['URL']
-        usuario = app.config['USUARIO']
-        senha = app.config['API_TOKEN']
-        acesso = JiraReporter(jql, url, usuario, senha)
-        chamados, anexos = acesso.listar_preventivas_velsis()
+
+        acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
+                              app.config['CAMPOS_VELSIS'])
+        chamados, anexos = acesso.getissues()
         return render_template('relatorio_velsis.html', resposta=chamados, anexos=anexos,
                                titulo="Relatório - Balanças")
     except Exception as e:
+        logging.error(f"Erro ai camarada: {e.__str__()} / {traceback.format_exc()}")
         flash(e.__str__(), "alert-danger")
         return render_template('velsis.html', form=form, titulo="Preventivas - Balanças")

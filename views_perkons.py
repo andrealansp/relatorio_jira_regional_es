@@ -1,3 +1,5 @@
+import logging
+
 from flask import render_template, request, redirect, session, flash, url_for
 
 from acessojira import JiraReporter
@@ -8,6 +10,7 @@ from helpers import FormularioRelatorio, FormularioSalas, FormularioPerkonsPaine
 @app.route("/perkons", methods=['GET'])
 def perkons():
     if 'usuario_logado' not in session or session['usuario_logado'] is None:
+        logging.info("Tentiva de acesso com falha !")
         return redirect(url_for('login'))
     formulario_pcl = FormularioRelatorio()
     return render_template('perkons.html', form=formulario_pcl,
@@ -47,28 +50,16 @@ def preventivas_perkons():
                  AND resolved >= {form.data_inicial.data} AND resolved <= {form.data_final.data} ORDER BY cf[10139] 
                  ASC, cf[10116] DESC, created ASC, cf[10060] ASC, creator DESC, issuetype ASC, 
                  timespent DESC, cf[10061] DESC"""
-    url = app.config['URL']
-    usuario = app.config['USUARIO']
-    senha = app.config['API_TOKEN']
-    acesso = JiraReporter(jql, url, usuario, senha)
 
-    # Relatório em partes
+    acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
+                          app.config['CAMPOS_PCLS'])
 
-    if form.tipo_relatorio.data == "Em Partes":
-        try:
-            qtd_paginas = acesso.paginacao_qtd_paginas()
-            indices = [indice for indice in range(1, qtd_paginas + 1)]
-            dados = {"dtinicial": form.data_inicial.data, "dtfinal": form.data_final.data, "indices": indices}
-            return render_template("perkons.html", form=form, titulo="Preventivas - PCL", dados=dados)
-        except Exception as e:
-            print('oi')
-            flash(e.__str__(), "alert-danger")
-            return render_template('perkons.html', form=form, titulo="Preventivas - PCL")
     try:
-        resposta, anexos = acesso.listar_todas_preventivas_perkons()
+        resposta, anexos = acesso.getissues()
         return render_template('relatorio_perkons.html', resposta=resposta, anexos=anexos,
                                titulo="Relatório - PCL")
     except Exception as e:
+        logging.error(f"{e.__str__()}")
         flash(e.__str__(), "alert-danger")
         return render_template('perkons.html', form=form, titulo="Preventivas - PCL")
 
@@ -95,15 +86,14 @@ def preventivas_perkons_paineis():
                  ORDER BY cf[10139] 
                  ASC, cf[10116] DESC, created ASC, cf[10060] ASC, creator DESC, issuetype ASC, 
                  timespent DESC, cf[10061] DESC"""
-    url = app.config['URL']
-    usuario = app.config['USUARIO']
-    senha = app.config['API_TOKEN']
-    acesso = JiraReporter(jql, url, usuario, senha)
+    acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
+                          app.config["CAMPOS_PCL"])
     try:
-        resposta, anexos = acesso.listar_todas_preventivas_perkons()
+        resposta, anexos = acesso.getissues()
         return render_template('relatorio_perkons.html', resposta=resposta, anexos=anexos,
                                titulo="Relatório - PCL")
     except Exception as e:
+        logging.error(f"{e.__str__()}")
         flash(e.__str__(), "alert-danger")
         return render_template('perkons_paineis.html', form=form, titulo="Preventivas - PCL")
 
@@ -121,17 +111,18 @@ def preventivas_perkons_paginado(dtinicial, dtfinal, pagina):
     senha = app.config['API_TOKEN']
     acesso = JiraReporter(jql, url, usuario, senha)
     try:
-        resposta, anexos = acesso.listar_preventivas_perkons_paginada(pagina)
+        resposta, anexos = acesso.getissues()
         return render_template('relatorio_perkons.html', resposta=resposta, anexos=anexos,
                                titulo="Relatório - PCL")
     except Exception as e:
+        logging.error(f"{e.__str__()}")
         flash(e.__str__(), "alert-danger")
         form = FormularioRelatorio()
         return render_template('perkons.html', form=form, titulo="Preventivas - PCL")
 
 
-@app.route("/preventivasalas", methods=['POST', ])
-def preventivasalas():
+@app.route("/preventiva_salas", methods=['POST', ])
+def preventiva_salas():
     if 'usuario_logado' not in session or session['usuario_logado'] is None:
         return redirect(url_for('login'))
 
@@ -140,44 +131,19 @@ def preventivasalas():
     if not form.validate_on_submit():
         flash('Formulário não é válido!', "alert-dangers")
         return redirect(url_for('salas'))
-
     try:
         jql = f"""assignee in (currentUser()) AND project = CIES AND issuetype = "Preventiva Salas"  AND "Request Type"
          in ("PREVENTIVAS SALA DE CONTROLE E OPERAÇÃO E PRODEST (CIES)") AND status = Resolved AND resolved >= 
          {form.data_inicial.data} AND resolved <= {form.data_final.data} ORDER BY cf[10139] ASC, cf[10116] DESC, 
          created ASC, cf[10060] ASC, creator DESC, issuetype ASC, timespent DESC, cf[10061] DESC"""
-        url = app.config['URL']
-        usuario = app.config['USUARIO']
-        senha = app.config['API_TOKEN']
-        acesso = JiraReporter(jql, url, usuario, senha)
-        resposta, anexos = acesso.listar_preventivas_salas()
+
+        acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
+                              app.config['CAMPOS_SALAS'])
+        resposta, anexos = acesso.getissues()
+        print(resposta, anexos)
         return render_template('relatorio_salas.html', resposta=resposta, anexos=anexos,
                                titulo="Relatório - Salas")
     except Exception as e:
+        logging.error(f"{e.__str__()}")
         flash(e.__str__(), "alert-danger")
-
-
-@app.route("/raw", methods=['GET', ])
-def raw():
-    if 'usuario_logado' not in session or session['usuario_logado'] is None:
-        return redirect(url_for('login'))
-    jql = f"""assignee in (currentUser()) AND project = CIES AND issuetype = "Preventiva PCL" AND "Request Type"
-                     in ("PREVENTIVA PONTO DE COLETA (CIES)") AND status = Resolved 
-                     AND resolved >= 2024-01-01 AND resolved <= 2024-01-31 ORDER BY cf[10139] ASC, cf[10116] 
-                     DESC, created ASC, cf[10060] ASC, creator DESC, issuetype ASC, timespent DESC, cf[10061] DESC"""
-    url = app.config['URL']
-    usuario = app.config['USUARIO']
-    senha = app.config['API_TOKEN']
-    acesso = JiraReporter(jql, url, usuario, senha)
-    resposta = acesso.retorna_json()
-    return resposta
-
-
-@app.route("/custonfields", methods=['POST', 'GET'])
-def custonfields():
-    if 'usuario_logado' not in session or session['usuario_logado'] is None:
-        return redirect(url_for('login'))
-    usuario = app.config['USUARIO']
-    senha = app.config['API_TOKEN']
-    acesso = JiraReporter.imprimir_campos_personalizados(usuario, senha)
-    return acesso
+        return render_template('salas.html', form=form, titulo="Preventivas - Salas")

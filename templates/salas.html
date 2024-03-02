@@ -2,23 +2,25 @@
 {% block content %}
 <section class="container my-5">
     <div class="row justify-content-center">
-        <div class="col-6">
-        <form action="{{url_for('preventivasalas')}}" method="post">
-            {{form.csrf_token()}}
-            <div class="form-group">
-                {{form.data_inicial.label(class="form-label")}}
-                {{form.data_inicial(class="form-control")}}
-            </div>
-            <div class="form-group">
-                {{form.data_final.label(class="form-label")}}
-                {{form.data_final(class="form-control")}}
-            </div>
-            <div class="form-group my-4">
-                {{form.visualizar(class="btn btn-primary buttons")}}
-                <a class="btn btn-success buttons" href="{{url_for('index')}}">Gerar</a>
-                <a class="btn btn-danger buttons" href="{{url_for('index')}}">Voltar</a>
-            </div>
-        </form>
+        <div class="col-5">
+            <h4 class="my-2 text-center">Emitir Relatório de Preventivas <br> Empresa Perkons Salas</h4>
+            <form class="my-5" action="{{url_for('preventiva_salas')}}" method="post">
+                {{form.csrf_token()}}
+                <div class="form-group">
+                    {{form.data_inicial.label(class="form-label")}}
+                    {{form.data_inicial(class="form-control")}}
+                </div>
+                <div class="form-group">
+                    {{form.data_final.label(class="form-label")}}
+                    {{form.data_final(class="form-control")}}
+                </div>
+                <div class="form-group my-4">
+                    {{form.visualizar(class="btn btn-primary buttons")}}
+                    <a class="btn btn-success buttons" href="{{url_for('index')}}">Gerar</a>
+                    <a class="btn btn-danger buttons" href="{{url_for('index')}}">Voltar</a>
+                </div>
+            </form>
+        </div>
     </div>
 </section>
 {% endblock %}

@@ -1,8 +1,8 @@
 {% extends 'template.html' %}
 {% block content %}
-<div class="row justify-content-start">
-    <div class="col-6 my-3">
-        <h1>Relatório de Preventivas Perkons</h1>
+<div class="row justify-content-evenly">
+    <div class="col-5 my-3">
+        <h4 class="my-2 text-center">Emitir Relatório de Preventivas <br> Empresa Perkons</h4>
         <form action="{{url_for('preventivas_perkons')}}" method="POST">
             {{form.csrf_token()}}
             <div class="form-group my-3">

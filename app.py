@@ -47,4 +47,4 @@ from views_relatorios import *
 
 
 if __name__ == '__main__':
-    serve(app, listen='*:8080')
+    app.run(debug=True)
