@@ -38,7 +38,6 @@ class JiraReporter:
         dict_chamados = {}
         for issue in issues:
             dict_chamados[issue.key] = issue.fields
-
         return dict_chamados
     def paginacao_qtd_paginas(self):
         url = self.__url
