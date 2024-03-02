@@ -19,7 +19,6 @@ def login():
 @app.route('/autenticar', methods=['POST', ])
 def autenticar():
     form = FormularioUsuario(request.form)
-    print(form.senha.data)
     usuario = Usuarios.query.filter_by(usuario=form.usuario.data).first()
     senha = check_password_hash(usuario.senha, form.senha.data)
     if usuario and senha:

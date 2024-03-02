@@ -2,16 +2,16 @@ import json
 import math
 from io import StringIO
 from pprint import pprint
+from typing import cast
 
 import jirapt
 import requests
 from jira import JIRA
 from jira.client import ResultList
 from jira.resources import Issue
-from typing import cast, List
 from requests.auth import HTTPBasicAuth
 
-from config import API_TOKEN, USUARIO
+from config import API_TOKEN, USUARIO, BASE_URL
 
 
 class JiraReporter:
@@ -23,15 +23,23 @@ class JiraReporter:
         self.__lista_de_chamados = {}
         self.__pgs = 0
         self.__chave = None
-        self.__jira = instancia_jira = JIRA(server=self.__url, basic_auth=(self.__usuario, self.__senha))
+        self.__jira = JIRA(server=BASE_URL, basic_auth=(self.__usuario, self.__senha))
 
     def __repr__(self):
         return f"{self.__jql, self.__url, self.__usuario}"
 
     def executa_cursor(self):
         myself = self.__jira.myself()
-        issues = cast(ResultList[Issue], jirapt.search_issues(self.__jira, self.__jql, 4,fields="key"))
+        issues = cast(ResultList[Issue], jirapt.search_issues(self.__jira, self.__jql, 4))
+        return issues
 
+    def lista_tudo(self):
+        issues = self.executa_cursor()
+        dict_chamados = {}
+        for issue in issues:
+            dict_chamados[issue.key] = issue.fields
+
+        return dict_chamados
     def paginacao_qtd_paginas(self):
         url = self.__url
         auth = HTTPBasicAuth(self.__usuario, self.__senha)
@@ -378,3 +386,15 @@ class JiraReporter:
         #     return arquivo
         # else:
         #     return arquivo
+
+
+if __name__ == "__main__":
+    jql = f"""assignee in (currentUser()) AND project = CIES AND issuetype = "Preventiva PCL" AND "Request Type"
+                     in ("PREVENTIVA PONTO DE COLETA (CIES)") AND status = Resolved 
+                     AND resolved >= 2024-02-01 AND resolved <= 2024-03-01  ORDER BY cf[10139] 
+                     ASC, cf[10116] DESC, created ASC, cf[10060] ASC, creator DESC, issuetype ASC, 
+                     timespent DESC, cf[10061] DESC"""
+    jira = JiraReporter(jql, BASE_URL, USUARIO, API_TOKEN)
+    chamados = jira.lista_tudo()
+    for chave, valor in chamados.items():
+        print(valor.customfield_10060.value)
