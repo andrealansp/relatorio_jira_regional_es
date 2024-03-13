@@ -1,9 +1,9 @@
 {% extends 'template.html' %}
 {% block content %}
-<div class="row justify-content-start">
-    <div class="col-4 my-3" id="relatorio" style="display:none;">
-        <h4 class="my-2 text-center">Emitir Relatório de Preventivas <br> Empresa Perkons</h4>
-        <form action="{{url_for('gerar_pdf')}}" method="POST">
+<div class="row justify-content-evenly">
+    <div class="col-6 my-3" id="relatorio">
+        <h4 class="my-2 text-center">Emitir Relatório de Preventivas</h4>
+        <form action="{{url_for('gerar_relatorio')}}" method="POST">
             {{form.csrf_token()}}
             <div class="form-group my-3">
                 {{form.data_inicial.label(class="form-label")}}
