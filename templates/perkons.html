@@ -1,8 +1,8 @@
 {% extends 'template.html' %}
 {% block content %}
 <div class="row justify-content-evenly">
-    <div class="col-5 my-3">
-        <h4 class="my-2 text-center">Emitir Relatório de Preventivas <br> Empresa Perkons</h4>
+    <div class="col-5 my-3" id="visualizar">
+        <h4 class="my-2 text-center">Visualizar Relatório de Preventivas <br> Empresa Perkons</h4>
         <form action="{{url_for('preventivas_perkons')}}" method="POST">
             {{form.csrf_token()}}
             <div class="form-group my-3">
@@ -13,38 +13,11 @@
                 {{form.data_final.label(class="form-label")}}
                 {{form.data_final(class="form-control")}}
             </div>
-            <div class="form-group my-3">
-                {{form.tipo_relatorio.label(class="form-label")}}
-                {{form.tipo_relatorio(class="form-control")}}
-            </div>
             <div class="form-group my-4">
                 {{form.visualizar(class="btn btn-primary buttons")}}
-                <a class="btn btn-success buttons" href="{{url_for('perkons_paineis')}}">Paineis</a>
                 <a class="btn btn-danger buttons" href="{{url_for('index')}}">Voltar</a>
             </div>
         </form>
-    </div>
-    {% if dados %}
-    <div class="col-6 my-3 p-5">
-        <table class="table table-dark table-striped">
-            <thead>
-            <tr>
-                <td>Link para relatório:</td>
-                <td>Gerar Relatório</td>
-            </tr>
-            </thead>
-            <tbody>
-               {%for indice in dados.indices%}
-               <tr>
-                   <td> <a class="link" target="_blank" href="{{url_for('preventivas_perkons_paginado', dtinicial=dados.dtinicial, dtfinal=dados.dtfinal, pagina=indice)}}">
-                   Parte {{indice}} </a> </td>
-                   <td><a class="btn btn-success buttons" href="{{url_for('gerar_relatorio',dtinicial=dados.dtinicial, dtfinal=dados.dtfinal, pagina=indice,relatorio=2 )}}">Gerar PDF</a></td>
-               </tr>
-               {%endfor%}
-            </tbody>
-        </table>
-
-        {%endif%}
     </div>
 </div>
 {% endblock %}

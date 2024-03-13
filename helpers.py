@@ -11,8 +11,16 @@ class FormularioUsuario(FlaskForm):
 class FormularioRelatorio(FlaskForm):
     data_inicial = DateField('Data Inicial', [validators.data_required()])
     data_final = DateField('Data Final', [validators.data_required()], format="%Y-%m-%d")
-    tipo_relatorio = SelectField("Tipo de Relatório ?", choices=['Completo', 'Em Partes', 'Paineis'])
     visualizar = SubmitField('Visualizar')
+
+
+class FormularioGerarPDF(FlaskForm):
+    data_inicial = DateField('Data Inicial', [validators.data_required()])
+    data_final = DateField('Data Final', [validators.data_required()], format="%Y-%m-%d")
+    tipo_relatorio = SelectField('Tipo de Relatório', choices=[("pcl", "Pontos de Coleta"),
+                                                               ("balanca", "Pontos Com Balança"),
+                                                               ("salas", "Salas de Controle e Operação")])
+    emitir = SubmitField('Emitir')
 
 
 class FormularioPerkonsPaineis(FlaskForm):

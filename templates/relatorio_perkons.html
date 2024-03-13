@@ -12,20 +12,21 @@
     </div>
     <div class="row justify-content-center">
          <div class="col-8 text-center ">
-            <h6 class="align-middle"><a href="https://servicedeskpedrasverdes.atlassian.net/browse/{{key}}" target=”_blank”>{{key}}</a>-{{value['summary']}}</h6>
+            <h6 class="align-middle"><a href="https://servicedeskpedrasverdes.atlassian.net/browse/{{key}}" target=”_blank”>{{key}}</a>-{{value.fields.summary}}</h6>
         </div>
     </div>
     <div class="row">
         <div class="col-12 border border-secondary-subtle">
-            <p>SITE: {{value['customfield_10060']['value']}} - {{value['customfield_10060']['child']['value']}}</p>
+            <p>SITE: {{value.fields.customfield_10060.value}} - {{value.fields.customfield_10060.child.value}}</p>
         </div>
     </div>
+
     <div class="row">
         <div class="col-6 border border-secondary-subtle">
             <p>COORDENADOR:<br>ALEXANDER SANTOS</p>
         </div>
         <div class="col-6 border border-secondary-subtle">
-            <p>TÉCNICO:<br>{{value['customfield_10116']['value']}}</p>
+            <p>TÉCNICO:<br>{{value.fields.customfield_10116.value}}</p>
         </div>
     </div>
     <div class="row">
@@ -33,7 +34,7 @@
             <p>STATUS EQUIPAMENTO: <br>OPERANDO</p>
         </div>
         <div class="col-6 border border-secondary-subtle">
-            <p>COORDENADA: <br>{{value['customfield_10117']}}</p>
+            <p>COORDENADA: <br>{{value.fields.customfield_10117}}</p>
         </div>
     </div>
     <div class="row">
@@ -41,14 +42,14 @@
             <p>MOTIVO DA VISITA:<br>PREVENTIVA</p>
         </div>
         <div class="col-6 border border-secondary-subtle">
-            <p>ENDEREÇO:<br>{{value['customfield_10118']}}</p>
+            <p>ENDEREÇO:<br>{{value.fields.customfield_10118}}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-12 border border-secondary-subtle">
-            <p>DATA DA VISITA: {{value['customfield_10139']|datetime_format }}
-                <br>INÍCIO: {{value['customfield_10141']}}
-                <br>FIM: {{value['customfield_10144']}}
+            <p>DATA DA VISITA: {{value.fields.customfield_10139|datetime_format }}
+                <br>INÍCIO: {{value.fields.customfield_10141}}
+                <br>FIM: {{value.fields.customfield_10144}}
             </p>
         </div>
     </div>
@@ -57,39 +58,39 @@
             <br>
             <h6>Checklist de atendimento para manutenção preventiva</h6>
 
-            <p>1-Efetuada a limpeza de lentes e cúpulas?<br>{{value['customfield_10106']['value']}}
+            <p>1-Efetuada a limpeza de lentes e cúpulas?<br>{{value.fields.customfield_10106.value}}
             </p>
 
-            <p>2-Necessário ajustes de posicionamento?<br>{{value['customfield_10107']['value']}}</p>
+            <p>2-Necessário ajustes de posicionamento?<br>{{value.fields.customfield_10107.value}}</p>
 
 
             <p>3-Foram verificadas as conexões de cabeamento lógico?<br>
-                {{value['customfield_10108']['value']}}</p>
+                {{value.fields.customfield_10108.value}}</p>
 
 
             <p>4-Foram verificados os componentes elétricos utilizados para alimentação dos equipamentos(nobreak,
-                disjuntor e fusíveis)?<br>{{value['customfield_10109']['value']}}</p>
+                disjuntor e fusíveis)?<br>{{value.fields.customfield_10109.value}}</p>
 
 
             <p>5-Foi verifica do os estado das baterias para alimentação externa(painelsolar)?
-                <br>{{value['customfield_10110']['value']}}</p>
+                <br>{{value.fields.customfield_10110.value}}</p>
 
 
             <p>6-Efetuada a limpeza preventiva externa e interna dos equipamentos?<br>
-                {{value['customfield_10111']['value']}}</p>
+                {{value.fields.customfield_10111.value}}</p>
 
 
             <p>7-Foi verificado o reaperto dos contatos elétricos?<br>
-                {{value['customfield_10112']['value']}}</p>
+                {{value.fields.customfield_10112.value}}</p>
 
 
-            <p>8-Foi verificada a vedaçãodo gabinete?<br>{{value['customfield_10113']['value']}}</p>
+            <p>8-Foi verificada a vedaçãodo gabinete?<br>{{value.fields.customfield_10113.value}}</p>
 
 
-            <p>9-Há obstrução das lentes das câmeras?<br>{{value['customfield_10114']['value']}}</p>
+            <p>9-Há obstrução das lentes das câmeras?<br>{{value.fields.customfield_10114.value}}</p>
 
 
-            <p>10-Verificada a conectividade com o DSS?<br>{{value['customfield_10115']['value']}}</p>
+            <p>10-Verificada a conectividade com o DSS?<br>{{value.fields.customfield_10115.value}}</p>
         </div>
 
     </div>
@@ -98,8 +99,8 @@
         <div class="col-12">
             <div class="row justify-content-center">
                 <br>
-                <h6>Evidências da visita no local <span class="info">Quantidade de anexos: {{anexos[key]|length}}</span> </h6>
-                {%for anexo in anexos[key]%}
+                <h6>Evidências da visita no local <span class="info">Quantidade de anexos: {{value.fields.attachment|length}}</span> </h6>
+                {%for anexo in value.fields.attachment%}
                 <div class="col-5 m-3">
                     <img src="{{anexo['content']}}" alt="imagem" class="img-fluid">
                 </div>

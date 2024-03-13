@@ -4,13 +4,18 @@ from flask import render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_wtf.csrf import CSRFProtect
-from acessojira import JiraReporter
+from jirareporter import JiraReporter
 from waitress import serve
 import logging
 
 logger = logging.getLogger('waitress')
 logger.setLevel(logging.INFO)
 
+logging.basicConfig(
+    level=logging.INFO,
+    filename="servidor.log",
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
 
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
@@ -43,7 +48,6 @@ from views_perkons import *
 from views_usuarios import *
 from views_velsis import *
 from views_relatorios import *
-
 
 
 if __name__ == '__main__':
