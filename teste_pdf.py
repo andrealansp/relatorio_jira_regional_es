@@ -1,6 +1,6 @@
 import config
-from acessojira import JiraReporter
-from escreve_relatorio import PDF
+from jirareporter import JiraReporter
+from escreve_relatorio_pcls import PDF
 
 
 def gerar_relatorio(dtinicial, dtfinal, pagina, relatorio):

@@ -13,12 +13,12 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-8 text-center ">
-            <h6 class="align-middle"><a href="https://servicedeskpedrasverdes.atlassian.net/browse/{{key}}" target=”_blank”>{{key}}</a>-{{value['summary']}}</h6>
+            <h6 class="align-middle"><a href="https://servicedeskpedrasverdes.atlassian.net/browse/{{key}}" target=”_blank”>{{key}}</a>-{{value.fields.summary}}</h6>
         </div>
     </div>
     <div class="row">
         <div class="col-12 border border-secondary-subtle">
-            <p>SITE: {{value['customfield_10060']['value']}} - {{value['customfield_10060']['child']['value']}}</p>
+            <p>SITE: {{value.fields.customfield_10060.value}} - {{value.fields.customfield_10060.child.value}}</p>
         </div>
     </div>
     <div class="row">
@@ -26,7 +26,7 @@
             <p>COORDENADOR:<br>ALEXANDER SANTOS</p>
         </div>
         <div class="col-6 border border-secondary-subtle">
-            <p>TÉCNICO:<br>{{value['customfield_10116']['value']}}</p>
+            <p>TÉCNICO:<br>{{value.fields.customfield_10116.value}}</p>
         </div>
     </div>
     <div class="row">
@@ -42,14 +42,14 @@
             <p>MOTIVO DA VISITA:<br>PREVENTIVA</p>
         </div>
         <div class="col-6 border border-secondary-subtle">
-            <p>ENDEREÇO:<br>{{value['customfield_10060']['value']}}</p>
+            <p>ENDEREÇO:<br>{{value.fields.customfield_10060.value}}</p>
         </div>
     </div>
     <div class="row">
         <div class="col-12 border border-secondary-subtle">
-            <p>DATA DA VISITA: {{value['customfield_10139']|datetime_format }}
-                <br>INÍCIO: {{value['customfield_10141']}}
-                <br>FIM: {{value['customfield_10144']}}</p>
+            <p>DATA DA VISITA: {{value.fields.customfield_10139|datetime_format }}
+                <br>INÍCIO: {{value.fields.customfield_10141}}
+                <br>FIM: {{value.fields.customfield_10144}}</p>
         </div>
     </div>
     <div class="row">
@@ -57,22 +57,22 @@
             <br>
             <h6>Checklist de atendimento para manutenção preventiva</h6>
 
-            <p>1 – Verificada a limpeza e organização interna das mesas ? <br> {{value['customfield_10145']['value']}} </p>
-            <p>2 – Verificada as conexões de rede dos computadores ? <br>{{value['customfield_10146']['value']}}</p>
+            <p>1 – Verificada a limpeza e organização interna das mesas ? <br> {{value.fields.customfield_10145.value}} </p>
+            <p>2 – Verificada as conexões de rede dos computadores ? <br>{{value.fields.customfield_10146.value}}</p>
 
-            <p>3 – Verificada as conexões do controlador com telas do Video wall?<br>{{value['customfield_10147']['value']}}</p>
+            <p>3 – Verificada as conexões do controlador com telas do Video wall?<br>{{value.fields.customfield_10147.value}}</p>
 
-            <p>4 – Efetuado teste de autonimia do nobreak ?<br>{{value['customfield_10148']['value']}}</p>
+            <p>4 – Efetuado teste de autonimia do nobreak ?<br>{{value.fields.customfield_10148.value}}</p>
 
-            <p>5 - Foi verificado os estado das baterias do nobreak ?<br>{{value['customfield_10149']['value']}}</p>
+            <p>5 - Foi verificado os estado das baterias do nobreak ?<br>{{value.fields.customfield_10149.value}}</p>
 
-            <p>6 – Telas do video wall estão funcionais?<br>{{value['customfield_10150'][value]}}</p>
+            <p>6 – Telas do video wall estão funcionais?<br>{{value.fields.customfield_10150.value}}</p>
 
-            <p>7 – Estações de trabalho (desktop / monitores) estão funcionais ?<br>{{value['customfield_10151']['value']}}</p>
+            <p>7 – Estações de trabalho (desktop / monitores) estão funcionais ?<br>{{value.fields.customfield_10151.value}}</p>
 
-            <p>8 – Ambiente encontra-se climatizado ?<br>{{value['customfield_10152']['value']}}</p>
+            <p>8 – Ambiente encontra-se climatizado ?<br>{{value.fields.customfield_10152.value}}</p>
 
-            <p>9 - Verificada as conexões dos computadores com Video wall ?<br>{{value['customfield_10153']['value']}}</p>
+            <p>9 - Verificada as conexões dos computadores com Video wall ?<br>{{value.fields.customfield_10153.value}}</p>
 
 
         </div>
@@ -83,7 +83,7 @@
             <div class="row justify-content-center">
                 <br>
                 <h6>Evidências da visita no local</h6>
-                {%for anexo in anexos[key]%}
+                {%for anexo in value.fields.attachment%}
                 <div class="col-5 m-3">
                     <img src="{{anexo['content']}}" alt="imagem" class="img-fluid">
                 </div>
