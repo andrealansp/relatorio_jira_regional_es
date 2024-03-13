@@ -1,9 +1,9 @@
 {% extends 'template.html' %}
 {% block content %}
 <div class="row justify-content-start">
-    <div class="col-5 my-3" id="visualizar">
-        <h4 class="my-2 text-center">Visualizar Relatório de Preventivas <br> Empresa Perkons</h4>
-        <form action="{{url_for('preventivas_perkons')}}" method="POST">
+    <div class="col-4 my-3" id="relatorio" style="display:none;">
+        <h4 class="my-2 text-center">Emitir Relatório de Preventivas <br> Empresa Perkons</h4>
+        <form action="{{url_for('gerar_pdf')}}" method="POST">
             {{form.csrf_token()}}
             <div class="form-group my-3">
                 {{form.data_inicial.label(class="form-label")}}
@@ -13,8 +13,12 @@
                 {{form.data_final.label(class="form-label")}}
                 {{form.data_final(class="form-control")}}
             </div>
+            <div class="form-group my-3">
+                {{form.tipo_relatorio.label(class="form-label")}}
+                {{form.tipo_relatorio(class="form-control")}}
+            </div>
             <div class="form-group my-4">
-                {{form.visualizar(class="btn btn-primary buttons")}}
+                {{form.emitir(class="btn btn-primary buttons")}}
                 <a class="btn btn-danger buttons" href="{{url_for('index')}}">Voltar</a>
             </div>
         </form>

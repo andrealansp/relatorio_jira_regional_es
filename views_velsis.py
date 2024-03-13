@@ -1,13 +1,11 @@
-import traceback
 import logging
+import traceback
+
 from flask import render_template, request, redirect, session, flash, url_for
 
-from acessojira import JiraReporter
+from jirareporter import JiraReporter
 from app import app
 from helpers import FormularioVelsis
-
-logging.basicConfig(level=logging.INFO, filename="views_velsis.log", format="%(asctime)s - %(levelname)s - %(message)s")
-
 
 @app.route("/velsis", methods=['GET', ])
 def velsis():
@@ -31,11 +29,17 @@ def preventivasvelsis():
             (qm:ba8a45d0-c8a8-4107-98fe-bfc59d6bde38:70e33655-0037-42f7-94ef-d8503e158e39) 
             ORDER BY created ASC, cf[10060] ASC, creator DESC, issuetype ASC, timespent DESC, cf[10061] DESC"""
 
-        acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
-                              app.config['CAMPOS_VELSIS'])
-        chamados, anexos = acesso.getissues()
-        return render_template('relatorio_velsis.html', resposta=chamados, anexos=anexos,
-                               titulo="Relatório - Balanças")
+        acesso = JiraReporter(
+            app.config["URL"],
+            app.config["USUARIO"],
+            app.config["API_TOKEN"],
+            app.config["CAMPOS_VELSIS"],
+            jql,
+        )
+        chamados = acesso.getissues()
+        return render_template(
+            "relatorio_velsis.html", resposta=chamados, titulo="Relatório - Balanças"
+        )
     except Exception as e:
         logging.error(f"Erro ai camarada: {e.__str__()} / {traceback.format_exc()}")
         flash(e.__str__(), "alert-danger")

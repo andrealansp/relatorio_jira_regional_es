@@ -1,8 +1,9 @@
 import logging
+import traceback
 
 from flask import render_template, request, redirect, session, flash, url_for
 
-from acessojira import JiraReporter
+from jirareporter import JiraReporter
 from app import app
 from helpers import FormularioRelatorio, FormularioSalas, FormularioPerkonsPaineis
 
@@ -51,16 +52,25 @@ def preventivas_perkons():
                  ASC, cf[10116] DESC, created ASC, cf[10060] ASC, creator DESC, issuetype ASC, 
                  timespent DESC, cf[10061] DESC"""
 
-    acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
-                          app.config['CAMPOS_PCLS'])
+    acesso = JiraReporter(
+        app.config["URL"],
+        app.config["USUARIO"],
+        app.config["API_TOKEN"],
+        app.config["CAMPOS_PCLS"],
+        jql,
+    )
 
     try:
-        resposta, anexos = acesso.getissues()
-        return render_template('relatorio_perkons.html', resposta=resposta, anexos=anexos,
-                               titulo="Relatório - PCL")
+        resposta = acesso.getissues()
+        return render_template(
+            "relatorio_perkons.html", resposta=resposta, titulo="Relatório - PCL"
+        )
     except Exception as e:
         logging.error(f"{e.__str__()}")
-        flash(e.__str__(), "alert-danger")
+        flash(
+            f"{e.__str__()} - Trecho do código: {traceback.format_exc()}",
+            "alert-danger",
+        )
         return render_template('perkons.html', form=form, titulo="Preventivas - PCL")
 
 
@@ -86,15 +96,23 @@ def preventivas_perkons_paineis():
                  ORDER BY cf[10139] 
                  ASC, cf[10116] DESC, created ASC, cf[10060] ASC, creator DESC, issuetype ASC, 
                  timespent DESC, cf[10061] DESC"""
-    acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
-                          app.config["CAMPOS_PCL"])
+    acesso = JiraReporter(
+        app.config["URL"],
+        app.config["USUARIO"],
+        app.config["API_TOKEN"],
+        app.config["CAMPOS_PCL"],
+        jql,
+    )
     try:
         resposta, anexos = acesso.getissues()
         return render_template('relatorio_perkons.html', resposta=resposta, anexos=anexos,
                                titulo="Relatório - PCL")
     except Exception as e:
         logging.error(f"{e.__str__()}")
-        flash(e.__str__(), "alert-danger")
+        flash(
+            f"{e.__str__()} - Trecho do código: {traceback.format_exc()}",
+            "alert-danger",
+        )
         return render_template('perkons_paineis.html', form=form, titulo="Preventivas - PCL")
 
 
@@ -116,7 +134,10 @@ def preventivas_perkons_paginado(dtinicial, dtfinal, pagina):
                                titulo="Relatório - PCL")
     except Exception as e:
         logging.error(f"{e.__str__()}")
-        flash(e.__str__(), "alert-danger")
+        flash(
+            f"{e.__str__()} - Trecho do código: {traceback.format_exc()}",
+            "alert-danger",
+        )
         form = FormularioRelatorio()
         return render_template('perkons.html', form=form, titulo="Preventivas - PCL")
 
@@ -137,13 +158,21 @@ def preventiva_salas():
          {form.data_inicial.data} AND resolved <= {form.data_final.data} ORDER BY cf[10139] ASC, cf[10116] DESC, 
          created ASC, cf[10060] ASC, creator DESC, issuetype ASC, timespent DESC, cf[10061] DESC"""
 
-        acesso = JiraReporter(jql, app.config['URL'], app.config['USUARIO'], app.config['API_TOKEN'],
-                              app.config['CAMPOS_SALAS'])
-        resposta, anexos = acesso.getissues()
-        print(resposta, anexos)
-        return render_template('relatorio_salas.html', resposta=resposta, anexos=anexos,
-                               titulo="Relatório - Salas")
+        acesso = JiraReporter(
+            app.config["URL"],
+            app.config["USUARIO"],
+            app.config["API_TOKEN"],
+            app.config["CAMPOS_SALAS"],
+            jql,
+        )
+        resposta = acesso.getissues()
+        return render_template(
+            "relatorio_salas.html", resposta=resposta, titulo="Relatório - Salas"
+        )
     except Exception as e:
         logging.error(f"{e.__str__()}")
-        flash(e.__str__(), "alert-danger")
+        flash(
+            f"{e.__str__()} - Trecho do código: {traceback.format_exc()}",
+            "alert-danger",
+        )
         return render_template('salas.html', form=form, titulo="Preventivas - Salas")
